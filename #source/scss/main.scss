@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
     color: white;
-    font-family: Lava 3;
+    background-color: rgb(22,20,22);
 }
 
 .ibg {
@@ -77,7 +77,7 @@ body {
         justify-content: space-between;
         gap: 20px;
         max-width: 1100px;
-        background-color: rgb(22,20,22,0.8);
+        background-color: rgb(22,20,22,0.85);
         border: 7px solid rgb(0,180,230);
         margin: 0 auto;
         &.active {
@@ -147,7 +147,107 @@ body {
 
 }
 
-/* ------------------------------------------------------------------------------------------CONTENT */
+/* ------------------------------------------------------------------------------------------SEARCH-BOX */
 
+.page {
+
+    &__content {
+    }
+}
 .content {
+
+    &__catalog {
+    }
+}
+.catalog {
+
+    &__search-box {
+        margin: 50px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        ::placeholder {
+            color: rgb(163,163,163);
+        }
+    }
+
+    &__search-txt {
+        border: 2px solid rgb(0,180,230);
+        border-radius: 10px;
+        width: 700px;
+        height: 40px;
+        background-color: rgb(41,41,41);
+        color: rgb(225,227,230);
+        font-size: 20px;
+        padding-left: 12px;
+    }
+
+    &__search-btn {
+    }
+
+}
+
+/* ------------------------------------------------------------------------------------------MUSICIANS */
+
+.catalog {
+
+    &__musicians {
+    }
+}
+.musicians {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgb(35,35,35);
+    border: 3px solid rgb(0,180,230);
+    margin: 0 auto;
+    padding: 30px 30px;
+    gap: 30px;
+    max-width: 90%;
+    
+
+    &__body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        background-color: rgb(22,20,22);
+        padding: 20px;
+        &:hover {
+            background-color: rgb(0,180,230);
+            transition: all 1s ease;
+            .musicians__name {
+                color: rgb(22,20,22);
+                transition: all 1s ease;
+            }
+            .musicians__bands {
+                color: rgb(22,20,22);
+                transition: all 1s ease;
+            }
+        }
+    }
+
+    &__photo {
+        img {
+            max-width: 320px;
+        }
+    }
+
+    &__name {
+        font-size: 25px;
+        text-align: center;
+        color: rgb(225,227,230);
+        font-weight: 500;
+    }
+
+    &__bands {
+        font-size: 18px;
+        text-align: center;
+        color: rgb(225,227,230);
+    }
+
+    &__band {
+    }
 }

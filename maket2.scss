@@ -1,0 +1,711 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*, *:before, *:after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing: border-box;
+}
+a {text-decoration:none; color:inherit}
+:focus, :active{outline: none}
+a:focus, a:active{outline: none; color:inherit}
+nav, footer, header, aside{display:block}
+html, body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+input, button, textarea{font-family:inherit;}
+input::-ms-clear{display:none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding: 0; border: 0;}
+a, a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+ul, ol, li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size: inherit;}
+
+/* ------------------------------------------------------------------------------------------TECHNIC */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
+html, body{
+    background-color: black;
+    font-size: 14px;
+    color: #FFF;
+    font-family: Roboto;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.wrapper {
+    overflow: hidden;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+/* ------------------------------------------------------------------------------------------VARIABLES */
+
+$compCont: 1440;
+$phoneCont: 320;
+
+/* ------------------------------------------------------------------------------------------MIXINS */
+
+//Адаптив с 1 параметром
+
+@mixin adapt($property, $maxSize, $minSize) {
+    $size: $maxSize - $minSize;
+    $cont: $compCont - $phoneCont;
+    #{$property}: calc(#{$minSize + px} + #{$size} * ((100vw - #{$phoneCont + px}) / #{$cont}));
+}
+
+//Адаптив с 1 параметром и минимальным контейнером
+
+@mixin adaptwminc($property, $maxSize, $minSize, $minCont) {
+    $size: $maxSize - $minSize;
+    $cont: $compCont - $minCont;
+    #{$property}: calc(#{$minSize + px} + #{$size} * ((100vw - #{$minCont + px}) / #{$cont}));
+}
+
+//Адаптив с 1 параметром и максимальным контейнером
+
+@mixin adaptwmaxc($property, $maxSize, $minSize, $maxCont) {
+    $size: $maxSize - $minSize;
+    $cont: $maxCont - $phoneCont;
+    #{$property}: calc(#{$minSize + px} + #{$size} * ((100vw - #{$phoneCont + px}) / #{$cont}));
+}
+
+//Адаптив с 2 параметрами
+
+@mixin adapt2($property, $maxSize1, $maxSize2, $minSize1, $minSize2) {
+    $size1: $maxSize1 - $minSize1;
+    $size2: $maxSize2 - $minSize2;
+    $cont: $compCont - $phoneCont;
+    #{$property}: calc(#{$minSize1 + px} + #{$size1} * ((100vw - #{$phoneCont + px}) / #{$cont}))
+    calc(#{$minSize2 + px} + #{$size2} * ((100vw - #{$phoneCont + px}) / #{$cont}));
+}
+
+//Адаптив с 2 параметрами и минимальным контейнером
+
+@mixin adapt2wminc($property, $maxSize1, $maxSize2, $minSize1, $minSize2, $minCont) {
+    $size1: $maxSize1 - $minSize1;
+    $size2: $maxSize2 - $minSize2;
+    $cont: $compCont - $minCont;
+    #{$property}: calc(#{$minSize1 + px} + #{$size1} * ((100vw - #{$minCont + px}) / #{$cont}))
+    calc(#{$minSize2 + px} + #{$size2} * ((100vw - #{$minCont + px}) / #{$cont}));
+}
+
+//Адаптив с 4 параметрами
+
+@mixin adapt4($property, $maxSize1, $maxSize2, $maxSize3, $maxSize4, $minSize1, $minSize2, $minSize3, $minSize4) {
+    $size1: $maxSize1 - $minSize1;
+    $size2: $maxSize2 - $minSize2;
+    $size3: $maxSize3 - $minSize3;
+    $size4: $maxSize4 - $minSize4;
+    $cont: $compCont - $phoneCont;
+    #{$property}: calc(#{$minSize1 + px} + #{$size1} * ((100vw - #{$phoneCont + px}) / #{$cont}))
+    calc(#{$minSize2 + px} + #{$size2} * ((100vw - #{$phoneCont + px}) / #{$cont})) 
+    calc(#{$minSize3 + px} + #{$size3} * ((100vw - #{$phoneCont + px}) / #{$cont})) 
+    calc(#{$minSize4 + px} + #{$size4} * ((100vw - #{$phoneCont + px}) / #{$cont}));
+}
+
+//Адаптив с 4 параметрами и минимальным контейнером
+
+@mixin adapt4wminc($property, $maxSize1, $maxSize2, $maxSize3, $maxSize4, $minSize1, $minSize2, $minSize3, 
+$minSize4, $minCont) {
+    $size1: $maxSize1 - $minSize1;
+    $size2: $maxSize2 - $minSize2;
+    $size3: $maxSize3 - $minSize3;
+    $size4: $maxSize4 - $minSize4;
+    $cont: $compCont - $minCont;
+    #{$property}: calc(#{$minSize1 + px} + #{$size1} * ((100vw - #{$minCont + px}) / #{$cont}))
+    calc(#{$minSize2 + px} + #{$size2} * ((100vw - #{$minCont + px}) / #{$cont})) 
+    calc(#{$minSize3 + px} + #{$size3} * ((100vw - #{$minCont + px}) / #{$cont})) 
+    calc(#{$minSize4 + px} + #{$size4} * ((100vw - #{$minCont + px}) / #{$cont}));
+}
+
+//Адаптив line-height
+
+@mixin lh($lh, $fs) {
+    line-height: $lh / $fs * 100%;
+}
+
+/* ------------------------------------------------------------------------------------------PATTERNS */
+
+%h1pat {
+    @include adapt(font-size, 130, 40);
+    @include lh(130, 130);
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+%h2pat {
+    @include lh(88, 80);
+    letter-spacing: 1px;
+    @include adapt(font-size, 80, 30);
+    text-transform: uppercase;
+}
+
+/* ------------------------------------------------------------------------------------------HEADER */
+
+@import "header.scss";
+
+/* ------------------------------------------------------------------------------------------TITLE */
+
+.main {
+
+    &__title {
+        @include adapt(padding-top, 90, 66)
+    }
+}
+.title {
+
+    &__container {
+    }
+
+    &__body {
+    }
+
+    &__text-con {
+    }
+}
+.container {
+}
+.text-con {
+    @include adapt4(padding, 135, 45, 90, 120, 20, 20, 20, 20); 
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    &__text {
+        @extend %h1pat;
+    }
+}
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+
+    &__row {
+        display: flex;
+        align-items: center;
+        writing-mode: vertical-rl;
+    }
+
+    &__row-pic {
+        padding: 0px 0px 7px 0px;
+    }
+
+    &__row-text {
+        font-size: 11px;
+        @include lh(20, 11);
+    }
+}
+.mouse {
+    border: 1px solid #FFFFFF60;
+    border-radius: 9px;
+    width: 20px;
+    height: 29px;
+    margin: 0px 0px 25px 120px;
+
+    &__white {
+        margin: 6px 8px;
+        background-color: #fff;
+        height: 5px;
+        width: 2px;
+    }
+}
+@media (max-width: 480px) {
+    .text-con {
+        display: flex;
+        flex-direction: column;
+    }
+    .contacts {
+        flex-direction: row;
+        justify-content: center;
+        @include adaptwmaxc(padding-top, 20, 10, 480);
+        @include adaptwmaxc(gap, 60, 30, 480);
+        &__row {
+            writing-mode: horizontal-tb;
+        }
+        &__row-pic {
+            padding: 0px 7px 0px 0px;
+        }
+        &__row-text {
+            @include adaptwmaxc(font-size, 14, 12, 480)
+        }
+        img {
+            transform: rotate(-90deg);
+        }
+    }
+    .mouse {
+        @include adapt4(margin, 0, 0, 25, 120, 0, 0, 10, 20);
+    }
+}
+
+/* ------------------------------------------------------------------------------------------WE-ARE */
+
+.main {
+
+    &__we-are {
+    }
+}
+.we-are {
+
+    &__container {
+    }
+
+    &__body {
+    }
+}
+.body-pic {
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+    @include adapt(padding-bottom, 120, 20);
+    margin-right: 8px;
+	&__line {
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        @include adapt(margin-top, -23, -15.5);
+        @include adapt(padding, 13, 9);
+        background-color: #191B25;
+            img {
+                @include adapt(height, 20, 14);
+            }
+	}
+}
+.container {
+}
+.wa-rows {
+
+    &__pics {
+    }
+
+    &__text {
+    }
+
+    &__logs {
+    }
+}
+.wr-pics {
+    @include adapt(margin-bottom, -604, -202);
+    @include adapt(padding-bottom, 60, 20);
+
+    &__flex-pics {
+        display: flex;
+        justify-content: center;
+        @include adapt(gap, 40, 13);
+        img {
+            @include adapt(height, 447, 149);
+        }
+    }
+
+    &__flex-pic1 {
+    }
+
+    &__flex-pic2 {
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        @include adapt(bottom, 300, 100);
+        img {
+            @include adapt(height, 156, 52);
+        }
+    }
+
+    &__triangle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include adapt(height, 447, 149);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        @include adapt(bottom, 604, 202);
+        img {
+            @include adapt(height, 14, 5);
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .wr-pics {
+        @include adaptwmaxc(margin-bottom, -604, -302, 700);
+    
+        &__flex-pics {
+            justify-content: center;
+            flex-direction: column;
+            img {
+                @include adaptwmaxc(height, 447, 223.5, 700);
+            }
+        }
+    
+        &__flex-pic1 {
+            display: flex;
+            justify-content: center;
+        }
+    
+        &__flex-pic2 {
+            display: flex;
+            justify-content: center;
+        }
+    
+        &__logo {
+            @include adaptwmaxc(bottom, 540, 270, 700);
+            img {
+                @include adaptwmaxc(height, 156, 78, 700);
+            }
+        }
+    
+        &__triangle {
+            @include adaptwmaxc(height, 447, 223.5, 700);
+            @include adaptwmaxc(bottom, 840, 420, 700);
+            img {
+                @include adaptwmaxc(height, 14, 7, 700);
+            }
+        } 
+    }
+}
+
+.wr-text {
+    @include adapt(width, 960, 320);
+    margin: 0 auto;
+    padding: 0px 5px;
+    @include adapt(padding-bottom, 150, 30);
+
+    &__columns {
+        @include adapt(gap, 145, 10);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__column1 {
+    }
+
+    &__column1-text {
+        @extend %h2pat;
+    }
+
+    &__column2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        @include adapt(gap, 30, 10);
+    }
+
+    &__column2-text {
+        @include lh(24, 20);
+        @include adapt(font-size, 20, 13);
+        color: #FFFFFF95;
+    }
+
+    &__column2-button {
+        @include adapt(max-width, 163, 40);
+        button {
+            color: #FFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include adapt(font-size, 14, 10);
+            @include adapt2(padding, 12, 17, 8, 12);
+            background-color: #C6100F;
+            @include lh(19.6, 14);
+            letter-spacing: 1px;
+            border-radius: 5px;
+            white-space: nowrap;
+            text-align: center;
+        }
+    }
+}
+.wr-logs {
+    @include adapt(width, 550, 320);
+    margin: 0 auto;
+    padding: 0px 5px;
+
+    &__rows {
+        @include adapt(padding-bottom, 140, 30);
+    }
+}
+.wl-rows {
+    display: flex;
+    flex-direction: column;
+    @include adapt(gap, 35, 10);
+
+    &__head {
+        @include lh(30, 20);
+        letter-spacing: 1px;
+        @include adapt(font-size, 20, 13);
+        text-align: center;
+    }
+
+    &__logs {
+    }
+
+    &__foot {
+        max-width: 120px;
+        margin: 0 auto;
+        p {
+            text-align: center;
+            @include lh(22, 13);
+            letter-spacing: 1px;
+            @include adapt(font-size, 13, 10);
+            border-bottom: 1px solid #FFFFFF30;
+        }  
+    }
+}
+
+.wr2-logs {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+
+    &__row {
+        display: flex;
+        flex-direction: row;
+        flex-basis: 50%;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 33%;
+        img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.wlc-snowflake {
+    img {
+        @include adapt(height, 53, 42);
+        width: 100%;
+    }
+}
+
+.wlc-mouf {
+    img {
+        @include adapt(height, 54, 42);
+        width: 100%;
+    }
+}
+
+.wlc-spage {
+    img {
+        @include adapt(height, 13, 11);
+        width: 100%;
+    }
+}
+
+.wlc-webflow {
+    img {
+        @include adapt(height, 26, 21);
+        width: 100%;
+    }
+}
+
+.wlc-rise {
+    img {
+        @include adapt(height, 61, 49);
+        width: 100%;
+    }
+}
+
+.wlc-aoob {
+    img {
+        @include adapt(height, 24, 19);
+        width: 100%;
+    }
+}
+
+/* ------------------------------------------------------------------------------------------OUR-WORK */
+
+.main {
+
+    &__our-work {
+    }
+}
+.our-work {
+
+    &__title {
+        @extend %h1pat;
+        margin: 0 auto;
+        @include adapt(padding-bottom, 60, 15);
+    }
+
+    &__container {
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        @include adapt(padding-bottom, 100, 30);
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__text {
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+        padding: 30px 0px;
+        background-color: #C6100F;
+        margin: 0 auto;
+        width: 100%;
+        p {
+            max-width: 100px;
+            text-align: center;
+            @include lh(22, 13);
+            letter-spacing: 1px;
+            @include adapt(font-size, 13, 10);
+            border-bottom: 1px solid #FFFFFF30;
+        }
+    }
+
+    &__column {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .our-work {
+        
+        &__row {
+            flex-wrap: wrap;
+            @include adaptwmaxc(gap, 30, 15, 700);
+        }
+        &__column {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            img {
+                width: 70%;
+            }
+        }
+        &__text {
+            @include adaptwmaxc(margin-top, 30, 15, 700);
+            width: 70%;
+        }
+    }
+}
+
+/* ------------------------------------------------------------------------------------------WE-BUILD */
+
+.main {
+
+    &__we-build {
+    }
+}
+.we-build {
+
+    &__container {
+    }
+
+    &__body {
+    }
+
+    &__title {
+        @extend %h2pat;
+        text-align: center;
+        @include adapt(margin-bottom, 80, 20);
+        padding: 0px 8px;
+    }
+
+    &__columns {
+        display: flex;
+        padding: 0px 8px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        @include adapt(gap, 30, 15);
+    }
+
+    &__column {
+        background-color: #171924;
+        @include adapt(padding, 15, 11.25);
+        @include adapt(padding-bottom, 35, 26.25);
+        display: flex;
+        flex-direction: column;
+        @include adapt(max-width, 270, 202.5);
+    }
+
+    &__frame-out {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(maket2_images/we-build/bg.png);
+        background-position: bottom;
+        @include adapt4(padding, 30, 95, 40, 95, 22.5, 71.25, 30, 71.25);
+        @include adapt(margin-bottom, 25, 12.5);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &__frame-in {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include adapt(padding, 21, 15.75);
+        background-color: #C6100F;
+        img {
+            @include adapt(height, 36, 27);
+        }
+    }
+
+    &__text1 {
+        text-transform: uppercase;
+        text-align: center;
+        @include lh(30, 19);
+        letter-spacing: 1px;
+        @include adapt(font-size, 19, 14.25);
+        @include adapt(padding-bottom, 10, 7.5);
+    }
+
+    &__text2 {
+        text-align: center;
+        @include lh(24, 20);
+        @include adapt(font-size, 19, 14.5);
+        color: #FFFFFF95;
+    }
+
+    @media (max-width: 800px) {
+        &__column {
+            max-width: 800px;
+            flex-grow: 1;
+        }
+    }
+}
