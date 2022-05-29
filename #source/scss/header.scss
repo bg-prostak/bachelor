@@ -1,7 +1,12 @@
+@import "null.scss";
+@import "variables.scss";
+
+/* ------------------------------------------------------------------------------------------ */
+
 .header {
     min-height: 80px;
     background-color: rgb(22,20,22,0.85);
-    position: absolute;
+    position: fixed;
     width: 100%;
     z-index: 50;
     display: flex;
@@ -17,14 +22,27 @@
         padding: 15px 30px;
     }
 
-    &__text {
+    &__contacts {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 20px;
         min-width: 300px;
-        color: white;
+        img {
+            min-height: 25px;
+        }
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white;
         font-size: 30px;
         span {
-            color: rgb(0,180,230);
+            color: $blue;
             &.active {
-                color: white;
+                color: $white;
                 transition: all 1s ease;
             }
         }
@@ -32,26 +50,25 @@
             color: inherit;
             background-color: inherit;
             &.active {
-                color: rgb(253,117,27);
+                color: $orange;
                 transition: all 1s ease;
             }
         }
     }
 
-    &__logo {
-        img {
-            min-height: 50px;
+    &__user {
+        display: flex;
+        justify-content: flex-end;
+        min-width: 300px;
+        gap: 10px;
+        font-size: 20px;
+    }
+
+    &__entry {
+        &:hover {
+            color: $blue;
+            transition: all 1s ease;
         }
     }
 
-    &__contacts {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        gap: 20px;
-        min-width: 300px;
-        img {
-            min-height: 25px;
-        }
-    }
 }
