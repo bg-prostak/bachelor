@@ -1,0 +1,163 @@
+/* ------------------------------------------------------------------------------------------STYLE-IMPORTS */
+
+@import "null.scss";
+@import "header.scss";
+@import "variables.scss";
+
+/* ------------------------------------------------------------------------------------------TECHNIC */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+body {
+    color: $white;
+    background-color: $graybright1;
+}
+
+.wrapper {
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ------------------------------------------------------------------------------------------MUSICIAN */
+
+.musician {
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    background-color: $graybright2;
+    padding: 20px;
+    gap: 20px;
+    border: 5px solid $blue;
+
+    &__photo {
+        img {
+            width: 450px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__name {
+        font-size: 50px;
+        text-align: center;
+        color: $blue;
+        font-weight: 500;
+    }
+
+    &__bands {
+        font-size: 36px;
+        text-align: center;
+        color: $blue;
+    }
+
+    &__wiki {
+        font-size: 25px;
+        text-align: justify;
+        color: $graywhite;
+        line-height: 120%;
+    }
+}
+
+/* ------------------------------------------------------------------------------------------EQUIPMENT */
+
+.equipment {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    background-color: $graybright3;
+    padding: 20px;
+    gap: 20px;
+    border: 3px solid $blue;
+    max-width: 90%;   
+
+    &__photo {
+        img {
+            width: 320px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__read {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__name {
+        font-size: 36px;
+        text-align: center;
+        color: $blue;
+        margin-bottom: 15px;
+    }
+
+    &__story {
+        font-size: 20px;
+        text-align: justify;
+        line-height: 120%;
+        color: $graywhite;
+        margin-bottom: 5px;
+    }
+
+    &__more {
+        font-size: 16px;
+        max-width: 0px;
+        text-align: center;
+        font-weight: 600;
+        color: $blue;
+        transition: all 1s ease;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__more-open {
+        margin-top: 5px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+
+}
+.buy {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-items: center;
+
+    &__price {
+        font-size: 26px;
+        letter-spacing: 1px;
+        color: $graywhite;
+        span {
+            color: $blue;
+        }
+    }
+
+    &__button {
+        font-size: 26px;
+        text-align: center;
+        color: $blue;
+        padding: 10px 15px;
+        background-color: $graybright1;
+        transition: all 1s ease;
+        &:hover {
+            color: $graywhite;
+            background-color: $blue;
+        }
+    }
+}

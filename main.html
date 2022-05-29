@@ -19,32 +19,26 @@
             <a href=""><img src="img/header/instagram.svg" alt=""></a>
             <a href=""><img src="img/header/facebook.svg" alt=""></a>
         </div>
-        <a href=""><h1 class="header__logo"><mark id="text-muz">Муз</mark><span id="text-man">Ман</span></h1></a>
+        <a href="main.html"><h1 class="header__logo"><mark id="text-muz">Муз</mark><span id="text-man">Ман</span></h1></a>
         <div class="header__user">
             <a href=""><div class="header__entry">Вход</div></a>
-            <div class="header__stick">|</div>
+            <div class="header__stick" id="header__stick">|</div>
             <a href=""><div class="header__entry">Регистрация</div></a>
         </div>
     </div>
 </header>            <div class="page__welcome welcome">
                 <div class="welcome__body" id="welcome__body">
-                    <a href=""><h1 class="welcome__title">Добро пожаловать в <mark id="title-muz">Муз</mark><span
-                            id="title-man">Ман</span>!</h1></a>
+                    <h1 class="welcome__title">Добро пожаловать в <mark id="title-muz">Муз</mark><span
+                            id="title-man">Ман</span>!</h1>
                     <h2 class="welcome__text">У нас сайт ваще нереально крутой. Короч такая тема, можно искать по
                         названию инструмента, а можно по имени музыканта найти на чем он играл. Вот ниже кнопки туда
                         можешь навестись, но нажимать не торопись, зацени пафосный псевдокласс на инструменте.
                     </h2>
-                    <div class="welcome__buttons">
+                    <div class="welcome__but">
                         <a href="">
-                            <div class="welcome__button-muz" id="welcome__button-muz" onmouseover="hoverOnBlue()"
-                                onmouseout="hoverOffBlue()">
-                                <h2>Музыкант</h2>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="welcome__button-man" id="welcome__button-man" onmouseover="hoverOnOrange()"
+                            <div class="welcome__button" id="welcome__button" onmouseover="hoverOnOrange()"
                                 onmouseout="hoverOffOrange()">
-                                <h2>Инструмент</h2>
+                                <h2>Поиск по инструменту</h2>
                             </div>
                         </a>
                     </div>
@@ -54,10 +48,10 @@
                 <div class="content__catalog catalog">
                     <div class="catalog__search-box">
                         <input type="text" class="catalog__search-txt"
-                        placeholder="Введите имя музыканта/название группы" id="musicians__body">
+                            placeholder="Введите имя музыканта/название группы" id="musicians__body">
                         <a class="catalog__search-btn" href="#"></a>
                     </div>
-                    <div class="catalog__musicians musicians">
+                    <div class="catalog__musicians musicians" id="musicians">
                         <a href="dimebag-darrell.html">
                             <ul class="musicians__body">
                                 <div class="musicians__photo">

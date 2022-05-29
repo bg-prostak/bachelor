@@ -5,7 +5,7 @@
 
 .header {
     min-height: 80px;
-    background-color: rgb(22,20,22,0.85);
+    background-color: $graybright1bg;
     position: fixed;
     width: 100%;
     z-index: 50;
@@ -38,20 +38,20 @@
         justify-content: center;
         align-items: center;
         color: $white;
-        font-size: 30px;
+        font-size: 35px;
         span {
             color: $blue;
+            transition: all 1s ease;
             &.active {
                 color: $white;
-                transition: all 1s ease;
             }
         }
         mark {
             color: inherit;
             background-color: inherit;
+            transition: all 1s ease;
             &.active {
                 color: $orange;
-                transition: all 1s ease;
             }
         }
     }
@@ -65,9 +65,18 @@
     }
 
     &__entry {
+        transition: all 1s ease;
         &:hover {
             color: $blue;
-            transition: all 1s ease;
+        }
+    }
+
+    &__stick {
+        color: $blue;
+        font-weight: 900;
+        transition: all 1s ease;
+        &.active {
+            color: $orange;
         }
     }
 

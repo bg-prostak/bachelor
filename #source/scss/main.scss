@@ -15,31 +15,11 @@ body {
     background-color: $graybright1;
 }
 
-.ibg {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        object-fit: cover;
-    }
-}
-
 .wrapper {
     overflow: hidden;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-}
-
-.container {
-    max-width: 1310px;
-    padding: 0px 15px;
 }
 
 /* ------------------------------------------------------------------------------------------MAIN-SCREEN */
@@ -65,9 +45,9 @@ body {
         border: 7px solid $blue;
         margin: 0 auto;
         margin-top: 29vh;
+        transition: all 1s ease;
         &.active {
             border: 7px solid $orange;
-            transition: all 1s ease;
         }
     }
 
@@ -77,57 +57,47 @@ body {
         font-size: 50px;
         span {
             color: $blue;
+            transition: all 1s ease;
             &.active {
                 color: $white;
-                transition: all 1s ease;
             }
         }
         mark {
             color: inherit;
             background-color: inherit;
+            transition: all 1s ease;
             &.active {
                 color: $orange;
-                transition: all 1s ease;
             }
         }
     }
 
     &__text {
         margin: 0px 100px;
+        line-height: 110%;
         text-align: center;
         font-size: 25px;
     }
 
-    &__buttons {
+    &__but {
         display: flex;
-        flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 200px;
+    }
+
+    &__button {
+        text-align: center;
+        margin: 0 auto;
         margin-bottom: 30px;
-    }
-
-    &__button-muz {
         padding: 10px;
         border: 5px solid $blue;
         border-radius: 10px;
         font-size: 35px;
-        transition: all 0.2s ease;
-        &.active {
-            border: 5px solid $orange;
-            transition: all 1s ease;
-        }
-    }
-
-    &__button-man {
-        padding: 10px;
-        border: 5px solid $blue;
-        border-radius: 10px;
-        font-size: 35px;
-        transition: all 0.2s ease;
+        transition: all 1s ease;
+        background-color: $bluebg;
         &:hover {
+            background-color: $orangebg;
             border: 5px solid $orange;
-            transition: all 1s ease;
         }
     }
 
@@ -166,6 +136,10 @@ body {
         color: $graywhite;
         font-size: 20px;
         padding-left: 12px;
+        transition: all 1s ease;
+        &.active {
+            border: 2px solid $orange;
+        }
     }
 
     &__search-btn {
@@ -191,6 +165,10 @@ body {
     margin-bottom: 50px;
     padding: 30px 30px;
     max-width: 90%;
+    transition: all 1s ease;
+    &.active {
+        border: 3px solid $orange;
+    }
 
     &__body {
         display: flex;
@@ -201,26 +179,24 @@ body {
         background-color: $graybright1;
         padding: 20px;
         margin: 15px;
+        transition: all 1s ease;
         &:hover {
             background-color: $blue;
-            transition: all 1s ease;
             .musicians__name {
                 color: $white;
-                transition: all 1s ease;
             }
             .musicians__bands {
                 color: $white;
-                transition: all 1s ease;
             }
             .musicians__photo {
                 filter: none;
-                transition: all 1s ease;
             }
         }
     }
 
     &__photo {
         filter: grayscale(100%); 
+        transition: all 1s ease;
         img {
             width: 320px;
         }
@@ -231,12 +207,27 @@ body {
         text-align: center;
         color: $blue;
         font-weight: 500;
+        transition: all 1s ease;
+        &.active {
+            color: $orange;
+        }
     }
 
     &__bands {
+        max-width: 320px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
         font-size: 18px;
         text-align: center;
         color: $blue;
+        transition: all 1s ease;
+        &.active {
+            color: $orange;
+        }
     }
 
     &__band {
