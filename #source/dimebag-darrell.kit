@@ -12,7 +12,7 @@
 <body>
     <div class="wrapper">
         <div class="page">
-            <!--@import "header.html"-->
+            <!--@import "../header-man.html"-->
             <div class="page__musician musician">
                 <div class="musician__photo">
                     <img src="img/musicians/dimebag-darrell.jpg" alt="">
@@ -28,9 +28,26 @@
                         метал-гитаристов всех времён.</div>
                 </div>
             </div>
+            <div class="page__categories categories">
+                <a href=""><div class="categories__category categories__selected" id="categories__selected">Все</div></a>
+                <a href=""><div class="categories__category" onmouseover="hoverOnSelected()"
+                    onmouseout="hoverOffSelected()">Гитары</div></a>
+                <a href=""><div class="categories__category" onmouseover="hoverOnSelected()"
+                    onmouseout="hoverOffSelected()">Усилители</div></a>
+                <a href=""><div class="categories__category" onmouseover="hoverOnSelected()"
+                    onmouseout="hoverOffSelected()">Педали эффектов</div></a>
+                <a href=""><div class="categories__category" onmouseover="hoverOnSelected()"
+                    onmouseout="hoverOffSelected()">Музыкальные аксессуары</div></a>
+                <a href=""><div class="categories__category" onmouseover="hoverOnSelected()"
+                    onmouseout="hoverOffSelected()">Студийное</div></a>
+                <a href=""><div class="categories__category" onmouseover="hoverOnSelected()"
+                    onmouseout="hoverOffSelected()">Струны</div></a>
+                <a href=""><div class="categories__category" onmouseover="hoverOnSelected()"
+                    onmouseout="hoverOffSelected()">Микрофоны</div></a>
+            </div>
             <div class="page__equipment equipment">
                 <div class="equipment__photo">
-                    <img src="img/dimebag-darrell/dean-dimebag-concrete-sledge-ml-reversed-headstock-xl.png" alt="">
+                    <img src="img/dimebag-darrell/1981-dean-from-hell-xl.png" alt="">
                 </div>
                 <div class="equipment__info">
                     <div class="equipment__read">
@@ -50,13 +67,13 @@
                     </div>
                     <div class="equipment__buy buy">
                         <div class="buy__price">Стоимость: <span>40000 руб.</span></div>
-                        <a href=""><div class="buy__button">Купить</div></a>
+                        <a href=""><div class="buy__button">Добавить в корзину</div></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/scripts/script-man.js"></script>
 </body>
 
 </html>

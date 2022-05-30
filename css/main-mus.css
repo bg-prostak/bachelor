@@ -216,7 +216,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 35px;
 }
 .header__logo span {
-  color: rgb(0, 180, 230);
+  color: rgb(253, 117, 27);
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -230,7 +230,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s ease;
 }
 .header__logo mark.active {
-  color: rgb(253, 117, 27);
+  color: rgb(0, 180, 230);
 }
 .header__user {
   display: -webkit-box;
@@ -248,16 +248,16 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s ease;
 }
 .header__entry:hover {
-  color: rgb(0, 180, 230);
+  color: rgb(253, 117, 27);
 }
 .header__stick {
-  color: rgb(0, 180, 230);
+  color: rgb(253, 117, 27);
   font-weight: 900;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 .header__stick.active {
-  color: rgb(253, 117, 27);
+  color: rgb(0, 180, 230);
 }
 
 /* ------------------------------------------------------------------------------------------TECHNIC */
@@ -282,26 +282,19 @@ body {
           flex-direction: column;
 }
 
-/* ------------------------------------------------------------------------------------------MUSICIAN */
-.musician {
+/* ------------------------------------------------------------------------------------------MAIN-SCREEN */
+.welcome {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin-top: 80px;
-  margin-bottom: 40px;
-  background-color: rgb(35, 35, 35);
-  padding: 20px;
-  gap: 20px;
-  border: 5px solid rgb(0, 180, 230);
+  min-height: 100vh;
+  background-image: url(../img/first-view/3b.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
-.musician__photo img {
-  width: 450px;
-}
-.musician__info {
+.welcome__body {
+  height: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -309,80 +302,54 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 15px;
-}
-.musician__name {
-  font-size: 50px;
-  text-align: center;
-  color: rgb(0, 180, 230);
-  font-weight: 500;
-}
-.musician__bands {
-  font-size: 36px;
-  text-align: center;
-  color: rgb(0, 180, 230);
-}
-.musician__wiki {
-  font-size: 25px;
-  text-align: justify;
-  color: rgb(225, 227, 230);
-  line-height: 120%;
-}
-
-/* ------------------------------------------------------------------------------------------CATEGORIES */
-.categories {
-  width: 90%;
-  margin: 0 auto;
-  margin-bottom: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 25px;
-  font-size: 25px;
-  color: rgb(225, 227, 230);
-}
-.categories__category {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.categories__category:hover {
-  color: rgb(0, 180, 230);
-}
-.categories__selected {
-  color: rgb(0, 180, 230);
-}
-.categories__selected.active {
-  color: rgb(225, 227, 230);
-}
-
-/* ------------------------------------------------------------------------------------------EQUIPMENT */
-.equipment {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin: 0 auto;
-  margin-bottom: 80px;
-  background-color: rgb(41, 41, 41);
-  padding: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   gap: 20px;
-  border: 3px solid rgb(0, 180, 230);
-  max-width: 90%;
-  color: rgb(225, 227, 230);
+  width: 100%;
+  max-width: 1100px;
+  background-color: rgba(22, 20, 22, 0.85);
+  border: 7px solid rgb(253, 117, 27);
+  margin: 0 auto;
+  margin-top: 29vh;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
-.equipment__photo {
+.welcome__body.active {
+  border: 7px solid rgb(0, 180, 230);
+}
+.welcome__title {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 50px;
+}
+.welcome__title span {
+  color: rgb(253, 117, 27);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.welcome__title span.active {
+  color: white;
+}
+.welcome__title mark {
+  color: inherit;
+  background-color: inherit;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.welcome__title mark.active {
+  color: rgb(0, 180, 230);
+}
+.welcome__text {
+  margin: 0px 100px;
+  line-height: 110%;
+  text-align: center;
+  font-size: 25px;
+}
+.welcome__but {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -393,100 +360,19 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.equipment__photo img {
-  width: 320px;
-}
-.equipment__info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.equipment__read {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.equipment__name {
-  font-size: 36px;
+.welcome__button {
   text-align: center;
-  color: rgb(0, 180, 230);
-  margin-bottom: 15px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 10px;
+  border: 5px solid rgb(253, 117, 27);
+  border-radius: 10px;
+  font-size: 35px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-color: rgba(253, 117, 27, 0.05);
 }
-.equipment__story {
-  font-size: 20px;
-  text-align: justify;
-  line-height: 120%;
-  color: rgb(225, 227, 230);
-  margin-bottom: 5px;
-}
-.equipment__more {
-  font-size: 16px;
-  max-width: 0px;
-  text-align: center;
-  font-weight: 600;
-  color: rgb(0, 180, 230);
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-}
-.equipment__more:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-.equipment__more-open {
-  margin-top: 5px;
-  max-height: 0;
-  overflow: hidden;
-  -webkit-transition: max-height 0.3s ease-out;
-  transition: max-height 0.3s ease-out;
-}
-
-.buy {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.buy__price {
-  font-size: 26px;
-  letter-spacing: 1px;
-  color: rgb(225, 227, 230);
-}
-.buy__price span {
-  color: rgb(0, 180, 230);
-}
-.buy__button {
-  font-size: 26px;
-  text-align: center;
-  color: rgb(0, 180, 230);
-  padding: 10px 15px;
-  background-color: rgb(22, 20, 22);
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-}
-.buy__button:hover {
-  color: rgb(225, 227, 230);
-  background-color: rgb(0, 180, 230);
+.welcome__button:hover {
+  background-color: rgba(0, 180, 230, 0.05);
+  border: 5px solid rgb(0, 180, 230);
 }

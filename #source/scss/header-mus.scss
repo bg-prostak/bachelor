@@ -40,8 +40,8 @@
         color: $white;
         font-size: 35px;
         span {
-            color: $blue;
-            transition: all 1s ease;
+            color: $orange;
+            transition: all 0.5s ease;
             &.active {
                 color: $white;
             }
@@ -49,9 +49,9 @@
         mark {
             color: inherit;
             background-color: inherit;
-            transition: all 1s ease;
+            transition: all 0.5s ease;
             &.active {
-                color: $orange;
+                color: $blue;
             }
         }
     }
@@ -65,18 +65,18 @@
     }
 
     &__entry {
-        transition: all 1s ease;
+        transition: all 0.5s ease;
         &:hover {
-            color: $blue;
+            color: $orange;
         }
     }
 
     &__stick {
-        color: $blue;
+        color: $orange;
         font-weight: 900;
-        transition: all 1s ease;
+        transition: all 0.5s ease;
         &.active {
-            color: $orange;
+            color: $blue;
         }
     }
 

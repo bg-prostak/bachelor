@@ -1,7 +1,7 @@
 /* ------------------------------------------------------------------------------------------STYLE-IMPORTS */
 
 @import "null.scss";
-@import "header.scss";
+@import "header-man.scss";
 @import "variables.scss";
 
 /* ------------------------------------------------------------------------------------------TECHNIC */
@@ -28,7 +28,7 @@ body {
     display: flex;
     flex-direction: row;
     margin-top: 80px;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     background-color: $graybright2;
     padding: 20px;
     gap: 20px;
@@ -67,6 +67,35 @@ body {
     }
 }
 
+/* ------------------------------------------------------------------------------------------CATEGORIES */
+
+.categories {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    font-size: 25px;
+    color: $graywhite;
+
+    &__category {
+        transition: all 0.3s ease;
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    &__selected {
+        color: $blue;
+        &.active {
+            color: $graywhite;
+        }
+    }
+}
+
 /* ------------------------------------------------------------------------------------------EQUIPMENT */
 
 .equipment {
@@ -78,9 +107,13 @@ body {
     padding: 20px;
     gap: 20px;
     border: 3px solid $blue;
-    max-width: 90%;   
+    max-width: 90%;
+    color: $graywhite;
 
     &__photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         img {
             width: 320px;
         }

@@ -1,0 +1,83 @@
+@import "null.scss";
+@import "variables.scss";
+
+/* ------------------------------------------------------------------------------------------ */
+
+.header {
+    min-height: 80px;
+    background-color: $graybright1bg;
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__body {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 20px;
+        min-width: 300px;
+        img {
+            min-height: 25px;
+        }
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+        font-size: 35px;
+        span {
+            color: $blue;
+            transition: all 0.5s ease;
+            &.active {
+                color: $white;
+            }
+        }
+        mark {
+            color: inherit;
+            background-color: inherit;
+            transition: all 0.5s ease;
+            &.active {
+                color: $orange;
+            }
+        }
+    }
+
+    &__user {
+        display: flex;
+        justify-content: flex-end;
+        min-width: 300px;
+        gap: 10px;
+        font-size: 20px;
+    }
+
+    &__entry {
+        transition: all 0.5s ease;
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    &__stick {
+        color: $blue;
+        font-weight: 900;
+        transition: all 0.5s ease;
+        &.active {
+            color: $orange;
+        }
+    }
+
+}

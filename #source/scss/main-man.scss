@@ -1,7 +1,7 @@
 /* ------------------------------------------------------------------------------------------STYLE-IMPORTS */
 
 @import "null.scss";
-@import "header.scss";
+@import "header-man.scss";
 @import "variables.scss";
 
 /* ------------------------------------------------------------------------------------------TECHNIC */
@@ -45,7 +45,7 @@ body {
         border: 7px solid $blue;
         margin: 0 auto;
         margin-top: 29vh;
-        transition: all 1s ease;
+        transition: all 0.5s ease;
         &.active {
             border: 7px solid $orange;
         }
@@ -57,7 +57,7 @@ body {
         font-size: 50px;
         span {
             color: $blue;
-            transition: all 1s ease;
+            transition: all 0.5s ease;
             &.active {
                 color: $white;
             }
@@ -65,7 +65,7 @@ body {
         mark {
             color: inherit;
             background-color: inherit;
-            transition: all 1s ease;
+            transition: all 0.5s ease;
             &.active {
                 color: $orange;
             }
@@ -93,7 +93,7 @@ body {
         border: 5px solid $blue;
         border-radius: 10px;
         font-size: 35px;
-        transition: all 1s ease;
+        transition: all 0.5s ease;
         background-color: $bluebg;
         &:hover {
             background-color: $orangebg;
@@ -136,7 +136,7 @@ body {
         color: $graywhite;
         font-size: 20px;
         padding-left: 12px;
-        transition: all 1s ease;
+        transition: all 0.5s ease;
         &.active {
             border: 2px solid $orange;
         }
@@ -165,7 +165,7 @@ body {
     margin-bottom: 50px;
     padding: 30px 30px;
     max-width: 90%;
-    transition: all 1s ease;
+    transition: all 0.5s ease;
     &.active {
         border: 3px solid $orange;
     }
@@ -179,7 +179,7 @@ body {
         background-color: $graybright1;
         padding: 20px;
         margin: 15px;
-        transition: all 1s ease;
+        transition: all 0.5s ease;
         &:hover {
             background-color: $blue;
             .musicians__name {
@@ -234,8 +234,7 @@ body {
     }
 }
 
-
 .musicians__body.hide {
-    display:none;
+    display: none;
     transition: all 1s ease;
 }

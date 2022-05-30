@@ -1,3 +1,5 @@
+/* ------------------------------------------------------------------------------------------GET_MORE_INFO */
+
 let coll = document.getElementsByClassName('equipment__more');
 for (let i = 0; i < coll.length; i++) {
     coll[i].addEventListener('click', function () {
@@ -10,6 +12,8 @@ for (let i = 0; i < coll.length; i++) {
         }
     })
 }
+
+/* ------------------------------------------------------------------------------------------CHANGE_OTHER_ELEMENT */
 
 function hoverOnOrange(){
     document.getElementById("welcome__body").classList.add("active");
@@ -31,6 +35,14 @@ function hoverOffOrange(){
     document.getElementById("musicians__body").classList.remove("active");
     document.getElementById("musicians").classList.remove("active");
 }
+function hoverOnSelected(){
+    document.getElementById("categories__selected").classList.add("active");
+}
+function hoverOffSelected(){
+    document.getElementById("categories__selected").classList.remove("active");
+}
+
+/* ------------------------------------------------------------------------------------------MUSICIAN_SEARCH */
 
 document.querySelector('#musicians__body').oninput = function () {
     let val = this.value.trim();
