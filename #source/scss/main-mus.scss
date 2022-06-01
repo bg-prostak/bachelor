@@ -13,6 +13,7 @@ h1, h2, h3, h4, h5, h6 {
 body {
     color: $white;
     background-color: $graybright1;
+    scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -149,6 +150,45 @@ body {
 
 }
 
+/* ------------------------------------------------------------------------------------------CATEGORIES */
+
+.categories {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.button {
+    background-color: inherit;
+    color: $graywhite;
+    font-size: 22px;
+    transition: all 0.3s ease;
+    &:hover {
+        color: $orange;
+    }
+}
+.category-all {
+}
+.category-guitar {
+}
+.category-amp {
+}
+.category-pedal {
+}
+.category-accessory {
+}
+.category-studio {
+}
+.category-strings {
+}
+.category-microphon {
+}
+
 /* ------------------------------------------------------------------------------------------PRODUCTS */
 
 .equipment {
@@ -204,7 +244,7 @@ body {
         text-align: center;
         color: $orange;
         font-weight: 500;
-        min-height: 60px;
+        min-height: 80px;
         &.active {
             color: $blue;
         }
@@ -269,6 +309,7 @@ body {
     }
 
     &__counter {
+        color: $orange;
         align-self: flex-start;
         font-size: 20px;
         font-weight: 600;
@@ -283,11 +324,11 @@ body {
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        width: 100%;
+        width: 90%;
         height: 90vh;
         position: fixed;
         top: 55%;
-        right: 0%;
+        right: 5%;
         transform: translate(-0%, -50%);
         margin: auto;
         background-color: $graybright1;
@@ -306,6 +347,11 @@ body {
     }
 
     &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 5px;
+        height: 120px;
         img {
             width: 150px;
         }
@@ -314,6 +360,7 @@ body {
     &__name {
         color: $white;
         text-transform: uppercase;
+        padding-right: 5px;
     }
 
     &__price {
@@ -333,7 +380,37 @@ body {
     }
 }
 
-.equipment__body.hide {
+.button-active {
+    color: $orange;
+}
+
+.hide {
     display: none;
     transition: all 1s ease;
+}
+
+.anim-card {
+    transition: all 0.2s ease;
+    transform: scale(0);
+    opacity: 0;
+}
+
+.hide-card {
+    animation-name: hide-card;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hide-card {
+    0% {
+        visibility: visible;
+    }
+    100% {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        margin: 0;
+        font-size: 0;
+        padding: 0;
+    }
 }

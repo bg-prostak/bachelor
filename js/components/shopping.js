@@ -1,5 +1,5 @@
 class Shopping {
-    hangdleClear() {
+    handleClear() {
         ROOT_SHOPPING.innerHTML = '';
     }
 
@@ -32,11 +32,12 @@ class Shopping {
                         <td class="shopping__sum-price">${sumCatalog.toLocaleString()} руб.</td>
                     </tr>
                 </table>
-                <div class="shopping__close" onclick="shoppingPage.hangdleClear()">
-                <img src="img/shopping/close.png" alt="">
+                <div class="shopping__close" onclick="shoppingPage.handleClear()">
+                    <img src="img/shopping/close.png" alt="">
                 </div>
             </div>
         `;
+
         ROOT_SHOPPING.innerHTML = html;
     }
 }

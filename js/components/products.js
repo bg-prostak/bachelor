@@ -23,10 +23,10 @@ class Products {
         const productsStore = localStorageUtil.getProducts();
         let htmlCatalog = '';
 
-        CATALOG.forEach(({ id, name, price, img}) => {
+        CATALOG.forEach(({id, category_mus, name, price, img}) => {
             let activeClass = '';
             let activeText = '';
-
+            
             if (productsStore.indexOf(id) === -1) {
                 activeText = this.labelAdd;
             } else {
@@ -34,21 +34,21 @@ class Products {
                 activeText = this.labelRemove;
             }
 
-            htmlCatalog += `
-                <li class="equipment__product product">
-                    <span class="product__name">${name}</span>
-                    <div class="product__container">
-                        <img class="product__img" src="${img}" />
-                    </div>
-                    <div class="product__pbflex">
-                        <span class="product__price">${price.toLocaleString()} руб.</span>
-                        <button class="product__button${activeClass}"
-                        onclick="productsPage.handleSetLocationStorage(this, '${id}');">
-                            ${activeText}
-                        </button>
-                    </div>
-                </li>
-            `;
+        htmlCatalog += `
+            <li class="equipment__product product ${category_mus}">
+                <span class="product__name">${name}</span>
+                <div class="product__container">
+                    <img class="product__img" src="${img}" />
+                </div>
+                <div class="product__pbflex">
+                    <div class="product__price">${price.toLocaleString()} руб.</div>
+                    <button class="product__button${activeClass}"
+                    onclick="productsPage.handleSetLocationStorage(this, '${id}');">
+                        ${activeText}
+                    </button>
+                </div>
+            </li>
+        `;
         });
 
         const html = `

@@ -151,7 +151,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
 }
 
-/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------HEADER */
 .header {
   min-height: 80px;
   background-color: rgba(22, 20, 22, 0.85);
@@ -243,13 +243,6 @@ h1, h2, h3, h4, h5, h6 {
   gap: 10px;
   font-size: 20px;
 }
-.header__entry {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-.header__entry:hover {
-  color: rgb(253, 117, 27);
-}
 .header__stick {
   color: rgb(253, 117, 27);
   font-weight: 900;
@@ -260,6 +253,109 @@ h1, h2, h3, h4, h5, h6 {
   color: rgb(0, 180, 230);
 }
 
+/* ------------------------------------------------------------------------------------------ENTRY */
+.header__entry-body {
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.header__entry-body:hover {
+  color: rgb(253, 117, 27);
+}
+.header__entry-page {
+  cursor: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 50%;
+  height: 50vh;
+  position: fixed;
+  top: 55%;
+  right: 25%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  margin: auto;
+  background-color: rgb(22, 20, 22);
+  border: 1px solid rgb(253, 117, 27);
+}
+.header__entry-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  margin: auto;
+}
+.header__entry-close img {
+  height: 32px;
+}
+.header__register-body {
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.header__register-body:hover {
+  color: rgb(253, 117, 27);
+}
+.header__register-page {
+  cursor: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 50%;
+  height: 50vh;
+  position: fixed;
+  top: 55%;
+  right: 25%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  margin: auto;
+  background-color: rgb(22, 20, 22);
+  border: 1px solid rgb(253, 117, 27);
+}
+.header__register-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  margin: auto;
+}
+.header__register-close img {
+  height: 32px;
+}
+.header__dark-bg {
+  cursor: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
 /* ------------------------------------------------------------------------------------------TECHNIC */
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
@@ -268,6 +364,7 @@ h1, h2, h3, h4, h5, h6 {
 body {
   color: white;
   background-color: rgb(22, 20, 22);
+  scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -434,6 +531,40 @@ body {
 .search-box__txt.active {
   border: 2px solid rgb(0, 180, 230);
 }
+/* ------------------------------------------------------------------------------------------CATEGORIES */
+.categories {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 25px;
+}
+
+.button {
+  background-color: inherit;
+  color: rgb(225, 227, 230);
+  font-size: 22px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.button:hover {
+  color: rgb(253, 117, 27);
+}
+
 /* ------------------------------------------------------------------------------------------PRODUCTS */
 .equipment {
   border: 3px solid rgb(253, 117, 27);
@@ -516,7 +647,7 @@ body {
   text-align: center;
   color: rgb(253, 117, 27);
   font-weight: 500;
-  min-height: 60px;
+  min-height: 80px;
 }
 .product__name.active {
   color: rgb(0, 180, 230);
@@ -582,6 +713,7 @@ body {
   width: 40px;
 }
 .footer-shopping__counter {
+  color: rgb(253, 117, 27);
   -ms-flex-item-align: start;
       align-self: flex-start;
   font-size: 20px;
@@ -599,11 +731,11 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 100%;
+  width: 90%;
   height: 90vh;
   position: fixed;
   top: 55%;
-  right: 0%;
+  right: 5%;
   -webkit-transform: translate(0%, -50%);
           transform: translate(0%, -50%);
   margin: auto;
@@ -620,12 +752,26 @@ body {
 .shopping__close img {
   height: 32px;
 }
+.shopping__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 5px;
+  height: 120px;
+}
 .shopping__img img {
   width: 150px;
 }
 .shopping__name {
   color: white;
   text-transform: uppercase;
+  padding-right: 5px;
 }
 .shopping__price {
   color: rgb(225, 227, 230);
@@ -641,8 +787,57 @@ body {
   color: rgb(253, 117, 27);
 }
 
-.equipment__body.hide {
+.button-active {
+  color: rgb(253, 117, 27);
+}
+
+.hide {
   display: none;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
+}
+
+.anim-card {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+}
+
+.hide-card {
+  -webkit-animation-name: hide-card;
+          animation-name: hide-card;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes hide-card {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+    font-size: 0;
+    padding: 0;
+  }
+}
+
+@keyframes hide-card {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+    font-size: 0;
+    padding: 0;
+  }
 }

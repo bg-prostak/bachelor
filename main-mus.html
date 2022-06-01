@@ -21,9 +21,11 @@
         </div>
         <a href="main-mus.html"><h1 class="header__logo"><mark id="text-muz">Муз</mark><span id="text-man">Ман</span></h1></a>
         <div class="header__user">
-            <a href=""><div class="header__entry">Вход</div></a>
+            <div class="header__entry2" id="header__entry2"></div>
+            <div class="header__entry1" id="header__entry1"></div>
             <div class="header__stick" id="header__stick">|</div>
-            <a href=""><div class="header__entry">Регистрация</div></a>
+            <div class="header__register1" id="header__register1"></div>
+            <div class="header__register2" id="header__register2"></div>
         </div>
     </div>
 </header>            <div class="page__welcome welcome">
@@ -49,6 +51,16 @@
                     placeholder="Введите наименование инструмента" id="equipment__body">
                 <a class="search-box__btn" href="#"></a>
             </div>
+            <div class="page__categories categories">
+                <button class="categories__category button category-all button-active" data-filter="all">Все</button>
+                <button class="categories__category button category-guitar" data-filter="guitar">Гитары</button>
+                <button class="categories__category button category-amp" data-filter="amp">Усилители</button>
+                <button class="categories__category button category-pedal" data-filter="pedal">Педали эффектов</button>
+                <button class="categories__category button category-accessory" data-filter="accessory">Музыкальные аксессуары</button>
+                <button class="categories__category button category-studio" data-filter="studio">Студийное</button>
+                <button class="categories__category button category-strings" data-filter="strings">Струны</button>
+                <button class="categories__category button category-microphon" data-filter="microphon">Микрофоны</button>
+            </div>
             <div class="equipment" id="products-mus"></div>
             <div class="footer-shopping" id="footer-shopping-mus"></div>
             <div class="shopping" id="shopping-mus"></div>
@@ -61,6 +73,11 @@
     <script src="js/components/products.js"></script>
     <script src="js/components/footer-shopping.js"></script>
     <script src="js/components/shopping.js"></script>
+    <script src="js/categories-mus/category.js"></script>
+    <script src="js/components/header-entry.js"></script>
+    <script src="js/components/entry.js"></script>
+    <script src="js/components/header-register.js"></script>
+    <script src="js/components/register.js"></script>
 </body>
 
 </html>
