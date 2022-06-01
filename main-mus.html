@@ -12,7 +12,7 @@
 <body>
     <div class="wrapper">
         <main class="page">
-<header class="header">
+<header class="header" id="header-mus">
     <div class="header__body">
         <div class="header__contacts">
             <a href=""><img src="img/header/twitter.svg" alt=""></a>
@@ -44,7 +44,14 @@
                     </div>
                 </div>
             </div>
-            <div class="equipment" id="products"></div>
+            <div class="page__search-box search-box" id="search-box">
+                <input type="text" class="search-box__txt"
+                    placeholder="Введите наименование инструмента" id="equipment__body">
+                <a class="search-box__btn" href="#"></a>
+            </div>
+            <div class="equipment" id="products-mus"></div>
+            <div class="footer-shopping" id="footer-shopping-mus"></div>
+            <div class="shopping" id="shopping-mus"></div>
         </main>
     </div>
     <script type="text/javascript" src="js/scripts/script-mus.js"></script>
@@ -52,6 +59,8 @@
     <script src="js/constants/root.js"></script>
     <script src="js/utils/local-storage-util.js"></script>
     <script src="js/components/products.js"></script>
+    <script src="js/components/footer-shopping.js"></script>
+    <script src="js/components/shopping.js"></script>
 </body>
 
 </html>

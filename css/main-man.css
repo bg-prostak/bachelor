@@ -438,8 +438,8 @@ body {
   border: 3px solid rgb(0, 180, 230);
   margin: 0 auto;
   margin-bottom: 50px;
-  padding: 30px 30px;
   max-width: 90%;
+  padding: 30px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }

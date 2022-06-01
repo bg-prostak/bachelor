@@ -43,7 +43,7 @@ body {
     &__info {
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: 20px;
     }
 
     &__name {
@@ -56,7 +56,10 @@ body {
     &__bands {
         font-size: 36px;
         text-align: center;
-        color: $blue;
+        color: $graywhite;
+        span {
+            color: $blue;
+        }
     }
 
     &__wiki {
@@ -187,7 +190,7 @@ body {
         color: $blue;
         padding: 10px 15px;
         background-color: $graybright1;
-        transition: all 1s ease;
+        transition: all 0.5s ease;
         &:hover {
             color: $graywhite;
             background-color: $blue;
