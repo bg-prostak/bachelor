@@ -2,6 +2,7 @@ const CATALOG = [
     {
         id: 'el1',
         category_mus: 'guitar',
+        category_man: 'dimebag-darrell',
         name: '1981 Dean ML - "The Dean from Hell"',
         img: 'img/dimebag-darrell/1981-dean-from-hell-xl.png',
         price: 50000,
@@ -9,6 +10,7 @@ const CATALOG = [
     {
         id: 'el2',
         category_mus: 'guitar',
+        category_man: 'dimebag-darrell',
         name: 'Dean Dimebag Concrete Sledge ML - Reversed Headstock',
         img: 'img/dimebag-darrell/dean-dimebag-concrete-sledge-ml-reversed-headstock-xl.png',
         price: 60000,
@@ -16,6 +18,7 @@ const CATALOG = [
     {
         id: 'el3',
         category_mus: 'accessory',
+        category_man: 'dimebag-darrell',
         name: 'Dunlop Tortex Standard 0.88mm Guitar Picks (50шт.)',
         img: 'img/dimebag-darrell/dunlop-tortex-standard-0-88mm-guitar-picks-xl.png',
         price: 2000,
@@ -23,6 +26,7 @@ const CATALOG = [
     {
         id: 'el4',
         category_mus: 'pedal',
+        category_man: 'dimebag-darrell',
         name: 'MXR 6-Band Graphic Equalizer',
         img: 'img/dimebag-darrell/mxr-6-band-graphic-equalizer-xl.png',
         price: 8000,
@@ -30,6 +34,7 @@ const CATALOG = [
     {
         id: 'el5',
         category_mus: 'amp',
+        category_man: 'dimebag-darrell',
         name: 'Randall Warhead 2CH 300 Watt Amp Head',
         img: 'img/dimebag-darrell/randall-warhead-2ch-300-watt-amp-head-xl.png',
         price: 12000,
@@ -37,6 +42,7 @@ const CATALOG = [
     {
         id: 'el6',
         category_mus: 'microphon',
+        category_man: 'sadfds',
         name: '1981 Dean ML - "The Dean from Hell"',
         img: 'img/dimebag-darrell/dean-dimebag-concrete-sledge-ml-reversed-headstock-xl.png',
         price: 40000,
@@ -44,6 +50,7 @@ const CATALOG = [
     {
         id: 'el7',
         category_mus: 'microphon',
+        category_man: 'dgfgsfd',
         name: '1981 Dean ML - "The Dean from Hell"',
         img: 'img/dimebag-darrell/dean-dimebag-concrete-sledge-ml-reversed-headstock-xl.png',
         price: 40000,
@@ -51,6 +58,7 @@ const CATALOG = [
     {
         id: 'el8',
         category_mus: 'microphon',
+        category_man: '213213',
         name: '1981 Dean ML - "The Dean from Hell"',
         img: 'img/dimebag-darrell/dean-dimebag-concrete-sledge-ml-reversed-headstock-xl.png',
         price: 40000,
@@ -58,6 +66,7 @@ const CATALOG = [
     {
         id: 'el9',
         category_mus: 'microphon',
+        category_man: '213213',
         name: '1981 Dean ML - "The Dean from Hell"',
         img: 'img/dimebag-darrell/dean-dimebag-concrete-sledge-ml-reversed-headstock-xl.png',
         price: 40000,
@@ -65,6 +74,7 @@ const CATALOG = [
     {
         id: 'el10',
         category_mus: 'microphon',
+        category_man: '213213',
         name: '1981 Dean ML - "The Dean from Hell"',
         img: 'img/dimebag-darrell/dean-dimebag-concrete-sledge-ml-reversed-headstock-xl.png',
         price: 40000,

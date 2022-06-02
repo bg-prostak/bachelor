@@ -60,24 +60,217 @@
         display: flex;
         justify-content: flex-end;
         min-width: 300px;
-        gap: 10px;
         font-size: 20px;
-    }
-
-    &__entry {
-        transition: all 0.5s ease;
-        &:hover {
-            color: $blue;
-        }
     }
 
     &__stick {
         color: $blue;
         font-weight: 900;
+        padding: 0px 10px;
         transition: all 0.5s ease;
         &.active {
             color: $orange;
         }
     }
 
+}
+
+/* ------------------------------------------------------------------------------------------ENTRY */
+
+.header {
+
+    &__entry-body {
+        cursor: pointer;
+        transition: all 0.5s ease;
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    &__entry-page {
+        cursor: auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 50%;
+        height: 50vh;
+        position: fixed;
+        top: 55%;
+        right: 25%;
+        transform: translate(0%, -50%);
+        margin: auto;
+        background-color: $graybright1;
+        border: 1px solid $blue;
+    }
+
+    &__entry-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        margin: auto;
+        img {
+            height: 32px;
+        }
+    }
+
+    &__register-body {
+        cursor: pointer;
+        transition: all 0.5s ease;
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    &__register-page {
+        cursor: auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 50%;
+        height: 80vh;
+        position: fixed;
+        top: 55%;
+        right: 25%;
+        transform: translate(0%, -50%);
+        margin: auto;
+        background-color: $graybright1;
+        border: 1px solid $blue;
+    }
+
+    &__register-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        margin: auto;
+        img {
+            height: 32px;
+        }
+    }
+
+    &__dark-bg {
+        cursor: auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0%;
+        right: 0%;
+        transform: translate(0%, 0%);
+        margin: auto;
+        background-color: $blackbg;
+    }
+
+}
+
+.header {
+
+    &__entry-rows {
+        padding-top: 15vh;
+        display: flex;
+        flex-direction: column;
+        gap: 3vh;
+        color: $graywhite;
+    }
+
+    &__entry-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2vh;
+    }
+
+    &__entry-button {
+        display: inline-block;
+        margin: 0 auto;
+        margin-top: 10px;
+        font-size: 28px;
+        padding: 5px 15px;
+        background-color: $graybright0;
+        color: $blue;
+        transition: all 0.5s ease;
+        &:hover {
+            background-color: $blue;
+            color: $white;
+        }
+    }
+}
+
+.entry-row {
+
+    &__login-text {
+        font-size: 25px;
+        padding: 0px 5px;
+    }
+
+    &__login-input {
+        padding-left: 2px;
+        background-color: $graybright3;
+        border: 1px solid $blue;
+        font-size: 22px;
+        color: $graywhite;
+    }
+
+    &__password-text {
+        font-size: 25px;
+    }
+
+    &__password-input {
+        padding-left: 2px;
+        background-color: $graybright3;
+        border: 1px solid $blue;
+        font-size: 22px;
+        color: $graywhite;
+    }
+}
+
+.header {
+
+    &__register-rows {
+        padding-top: 15vh;
+        display: flex;
+        flex-direction: column;
+        gap: 3vh;
+        color: $graywhite;
+    }
+
+    &__register-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2vh;
+    }
+
+    &__register-button {
+        display: inline-block;
+        margin: 0 auto;
+        margin-top: 10px;
+        font-size: 28px;
+        padding: 5px 15px;
+        background-color: $graybright0;
+        color: $blue;
+        transition: all 0.5s ease;
+        &:hover {
+            background-color: $blue;
+            color: $white;
+        }
+    }
+}
+
+.register-row {
+
+    &__text {
+        font-size: 25px;
+    }
+
+    &__input {
+        padding-left: 2px;
+        background-color: $graybright3;
+        border: 1px solid $blue;
+        font-size: 22px;
+        color: $graywhite;
+    }
 }

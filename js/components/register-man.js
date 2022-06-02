@@ -1,6 +1,6 @@
-class Register {
+class Register_man {
     handleClear() {
-        ROOT_REGISTER.innerHTML = '';
+        ROOT_REGISTER_MAN.innerHTML = '';
     }
 
     render() {
@@ -8,8 +8,8 @@ class Register {
         const html = `
         <div class="header__dark-bg">
             <div class="header__register-page">
-                <div class="header__register-close" onclick="registerPage.handleClear()">
-                    <img src="img/shopping/close.png" alt="">
+                <div class="header__register-close" onclick="register_manPage.handleClear()">
+                    <img src="img/shopping/close_man.png" alt="">
                 </div>
                 <div class="header__register-rows">
                     <div class="header__register-row register-row">
@@ -42,8 +42,8 @@ class Register {
         </div>
         `;
 
-        ROOT_REGISTER.innerHTML = html;
+        ROOT_REGISTER_MAN.innerHTML = html;
     }
 }
 
-const registerPage = new Register();
+const register_manPage = new Register_man();

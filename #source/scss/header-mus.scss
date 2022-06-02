@@ -60,13 +60,13 @@
         display: flex;
         justify-content: flex-end;
         min-width: 300px;
-        gap: 10px;
         font-size: 20px;
     }
 
     &__stick {
         color: $orange;
         font-weight: 900;
+        padding: 0px 10px;
         transition: all 0.5s ease;
         &.active {
             color: $blue;
@@ -128,7 +128,7 @@
         justify-content: center;
         align-items: flex-start;
         width: 50%;
-        height: 50vh;
+        height: 80vh;
         position: fixed;
         top: 55%;
         right: 25%;
@@ -164,4 +164,113 @@
         background-color: $blackbg;
     }
 
+}
+
+.header {
+
+    &__entry-rows {
+        padding-top: 15vh;
+        display: flex;
+        flex-direction: column;
+        gap: 3vh;
+        color: $graywhite;
+    }
+
+    &__entry-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2vh;
+    }
+
+    &__entry-button {
+        display: inline-block;
+        margin: 0 auto;
+        margin-top: 10px;
+        font-size: 28px;
+        padding: 5px 15px;
+        background-color: $graybright0;
+        color: $orange;
+        transition: all 0.5s ease;
+        &:hover {
+            background-color: $orange;
+            color: $white;
+        }
+    }
+}
+
+.entry-row {
+
+    &__login-text {
+        font-size: 25px;
+        padding: 0px 5px;
+    }
+
+    &__login-input {
+        padding-left: 2px;
+        background-color: $graybright3;
+        border: 1px solid $orange;
+        font-size: 22px;
+        color: $graywhite;
+    }
+
+    &__password-text {
+        font-size: 25px;
+    }
+
+    &__password-input {
+        padding-left: 2px;
+        background-color: $graybright3;
+        border: 1px solid $orange;
+        font-size: 22px;
+        color: $graywhite;
+    }
+}
+
+.header {
+
+    &__register-rows {
+        padding-top: 15vh;
+        display: flex;
+        flex-direction: column;
+        gap: 3vh;
+        color: $graywhite;
+    }
+
+    &__register-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2vh;
+    }
+
+    &__register-button {
+        display: inline-block;
+        margin: 0 auto;
+        margin-top: 10px;
+        font-size: 28px;
+        padding: 5px 15px;
+        background-color: $graybright0;
+        color: $orange;
+        transition: all 0.5s ease;
+        &:hover {
+            background-color: $orange;
+            color: $white;
+        }
+    }
+}
+
+.register-row {
+
+    &__text {
+        font-size: 25px;
+    }
+
+    &__input {
+        padding-left: 2px;
+        background-color: $graybright3;
+        border: 1px solid $orange;
+        font-size: 22px;
+        color: $graywhite;
+    }
 }

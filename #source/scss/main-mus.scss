@@ -322,8 +322,9 @@ body {
 
     &__body {
         display: flex;
-        justify-content: center;
-        align-items: flex-start;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
         width: 90%;
         height: 90vh;
         position: fixed;
@@ -351,9 +352,9 @@ body {
         justify-content: center;
         align-items: center;
         padding-right: 5px;
-        height: 120px;
+        height: 40px;
         img {
-            width: 150px;
+            width: 50px;
         }
     }
 
@@ -377,6 +378,21 @@ body {
         font-weight: 500;
         font-size: 20px;
         color: $orange;
+    }
+
+    &__buy-button {
+        display: inline-block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        font-size: 28px;
+        padding: 5px 15px;
+        background-color: $graybright0;
+        color: $orange;
+        transition: all 0.5s ease;
+        &:hover {
+            background-color: $orange;
+            color: $white;
+        }
     }
 }
 

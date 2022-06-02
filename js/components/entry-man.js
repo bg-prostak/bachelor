@@ -1,6 +1,6 @@
-class Entry {
+class Entry_man {
     handleClear() {
-        ROOT_ENTRY.innerHTML = '';
+        ROOT_ENTRY_MAN.innerHTML = '';
     }
 
     render() {
@@ -8,8 +8,8 @@ class Entry {
         const html = `
         <div class="header__dark-bg">
             <div class="header__entry-page">
-                <div class="header__entry-close" onclick="entryPage.handleClear()">
-                    <img src="img/shopping/close.png" alt="">
+                <div class="header__entry-close" onclick="entry_manPage.handleClear()">
+                    <img src="img/shopping/close_man.png" alt="">
                 </div>
                 <div class="header__entry-rows">
                     <div class="header__entry-row entry-row">
@@ -26,8 +26,8 @@ class Entry {
         </div>
         `;
 
-        ROOT_ENTRY.innerHTML = html;
+        ROOT_ENTRY_MAN.innerHTML = html;
     }
 }
 
-const entryPage = new Entry();
+const entry_manPage = new Entry_man();

@@ -197,3 +197,101 @@ body {
         }
     }
 }
+
+/* ------------------------------------------------------------------------------------------PRODUCTS */
+
+.equipment {
+    border: 3px solid $blue;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    max-width: 90%;
+    transition: all 0.5s ease;
+    &.active {
+        border: 3px solid $orange;
+    }
+
+    &__body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: $graybright2;
+        padding: 30px;
+        transition: all 0.5s ease;
+    }
+}
+
+.product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $graybright1;
+    padding: 20px;
+    margin: 15px;
+    gap: 20px;
+    max-width: 360px;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $graybright1;
+        width: 320px;
+        height: 320px;
+    }
+
+    &__img {
+        width: 320px;
+    }
+
+    &__name {
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+        text-align: center;
+        color: $orange;
+        font-weight: 500;
+        min-height: 80px;
+        &.active {
+            color: $orange;
+        }
+    }
+
+    &__pbflex {
+        width: 320px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__price {
+        font-size: 18px;
+        text-align: center;
+        color: $graywhite;
+        padding-left: 5px;
+    }
+
+    &__button {
+        font-size: 20px;
+        text-align: center;
+        color: $orange;
+        padding: 10px 15px;
+        background-color: $graybright0;
+        transition: all 0.5s ease;
+        &:hover {
+            background-color: $blue;
+            color: $graywhite;
+        }
+    }
+
+    &__button_active {
+        font-size: 20px;
+        text-align: center;
+        color: $graywhite;
+        padding: 10px 15px;
+        background-color: $blue;
+    }
+}

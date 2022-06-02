@@ -240,24 +240,235 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-pack: end;
           justify-content: flex-end;
   min-width: 300px;
-  gap: 10px;
   font-size: 20px;
-}
-.header__entry {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-.header__entry:hover {
-  color: rgb(0, 180, 230);
 }
 .header__stick {
   color: rgb(0, 180, 230);
   font-weight: 900;
+  padding: 0px 10px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 .header__stick.active {
   color: rgb(253, 117, 27);
+}
+
+/* ------------------------------------------------------------------------------------------ENTRY */
+.header__entry-body {
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.header__entry-body:hover {
+  color: rgb(0, 180, 230);
+}
+.header__entry-page {
+  cursor: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 50%;
+  height: 50vh;
+  position: fixed;
+  top: 55%;
+  right: 25%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  margin: auto;
+  background-color: rgb(22, 20, 22);
+  border: 1px solid rgb(0, 180, 230);
+}
+.header__entry-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  margin: auto;
+}
+.header__entry-close img {
+  height: 32px;
+}
+.header__register-body {
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.header__register-body:hover {
+  color: rgb(0, 180, 230);
+}
+.header__register-page {
+  cursor: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 50%;
+  height: 80vh;
+  position: fixed;
+  top: 55%;
+  right: 25%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  margin: auto;
+  background-color: rgb(22, 20, 22);
+  border: 1px solid rgb(0, 180, 230);
+}
+.header__register-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  margin: auto;
+}
+.header__register-close img {
+  height: 32px;
+}
+.header__dark-bg {
+  cursor: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.header__entry-rows {
+  padding-top: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3vh;
+  color: rgb(225, 227, 230);
+}
+.header__entry-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 2vh;
+}
+.header__entry-button {
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 10px;
+  font-size: 28px;
+  padding: 5px 15px;
+  background-color: rgb(10, 10, 10);
+  color: rgb(0, 180, 230);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.header__entry-button:hover {
+  background-color: rgb(0, 180, 230);
+  color: white;
+}
+
+.entry-row__login-text {
+  font-size: 25px;
+  padding: 0px 5px;
+}
+.entry-row__login-input {
+  padding-left: 2px;
+  background-color: rgb(41, 41, 41);
+  border: 1px solid rgb(0, 180, 230);
+  font-size: 22px;
+  color: rgb(225, 227, 230);
+}
+.entry-row__password-text {
+  font-size: 25px;
+}
+.entry-row__password-input {
+  padding-left: 2px;
+  background-color: rgb(41, 41, 41);
+  border: 1px solid rgb(0, 180, 230);
+  font-size: 22px;
+  color: rgb(225, 227, 230);
+}
+
+.header__register-rows {
+  padding-top: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3vh;
+  color: rgb(225, 227, 230);
+}
+.header__register-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 2vh;
+}
+.header__register-button {
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 10px;
+  font-size: 28px;
+  padding: 5px 15px;
+  background-color: rgb(10, 10, 10);
+  color: rgb(0, 180, 230);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.header__register-button:hover {
+  background-color: rgb(0, 180, 230);
+  color: white;
+}
+
+.register-row__text {
+  font-size: 25px;
+}
+.register-row__input {
+  padding-left: 2px;
+  background-color: rgb(41, 41, 41);
+  border: 1px solid rgb(0, 180, 230);
+  font-size: 22px;
+  color: rgb(225, 227, 230);
 }
 
 /* ------------------------------------------------------------------------------------------TECHNIC */
@@ -280,6 +491,20 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+/* ------------------------------------------------------------------------------------------SCROLL-BAR */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(225, 227, 230);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(10, 10, 10);
 }
 
 /* ------------------------------------------------------------------------------------------MAIN-SCREEN */

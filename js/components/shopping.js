@@ -35,6 +35,7 @@ class Shopping {
                 <div class="shopping__close" onclick="shoppingPage.handleClear()">
                     <img src="img/shopping/close.png" alt="">
                 </div>
+                <button class="shopping__buy-button">Купить</button>
             </div>
         `;
 
