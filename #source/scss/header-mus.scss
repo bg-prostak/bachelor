@@ -40,18 +40,18 @@
         color: $white;
         font-size: 35px;
         span {
-            color: $orange;
-            transition: all 0.5s ease;
-            &.active {
-                color: $white;
-            }
-        }
-        mark {
-            color: inherit;
-            background-color: inherit;
+            color: $white;
             transition: all 0.5s ease;
             &.active {
                 color: $blue;
+            }
+        }
+        mark {
+            color: $orange;
+            background-color: inherit;
+            transition: all 0.5s ease;
+            &.active {
+                color: $white;
             }
         }
     }

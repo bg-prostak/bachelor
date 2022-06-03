@@ -1,6 +1,6 @@
 class Products {
     constructor() {
-        this.classNameActive = 'product__button_active';
+        this.classNameActive = 'buy__button_active';
         this.labelAdd = 'Добавить в корзину';
         this.labelRemove = 'Удалить из корзины';
     }
@@ -23,7 +23,7 @@ class Products {
         const productsStore = localStorageUtil.getProducts();
         let htmlCatalog = '';
 
-        CATALOG.forEach(({id, category_mus, category_man, name, price, img}) => {
+        CATALOG.forEach(({id, category_mus, category_man, name, price, img, story, more}) => {
             let activeClass = '';
             let activeText = '';
             
@@ -38,18 +38,24 @@ class Products {
 
         htmlCatalog += `
             <li class="equipment__product product ${category_mus}">
-                <span class="product__name">${name}</span>
-                <div class="product__container">
-                    <img class="product__img" src="${img}" />
+                <div class="equipment__photo">
+                    <img src="${img}" alt="">
                 </div>
-                <div class="product__pbflex">
-                    <div class="product__price">${price.toLocaleString()} руб.</div>
-                    <button class="product__button${activeClass}"
-                    onclick="productsPage.handleSetLocationStorage(this, '${id}');">
-                        ${activeText}
-                    </button>
+                <div class="equipment__info">
+                    <div class="equipment__read">
+                        <div class="equipment__name">${name}</div>
+                        <div class="equipment__story">${story}</div>
+                        <button class="equipment__more">Подробнее</button>
+                        <div class="equipment__more-open">${more}</div>
+                    </div>
+                    <div class="equipment__buy buy">
+                        <div class="buy__price">Стоимость: <span>${price.toLocaleString()} руб.</span></div>
+                        <button class="buy__button${activeClass}"
+                        onclick="productsPage.handleSetLocationStorage(this, '${id}');">${activeText}</button>
+                    </div>
                 </div>
             </li>
+            
         `;
         }
         });

@@ -216,21 +216,21 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 35px;
 }
 .header__logo span {
-  color: rgb(253, 117, 27);
+  color: white;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 .header__logo span.active {
-  color: white;
+  color: rgb(0, 180, 230);
 }
 .header__logo mark {
-  color: inherit;
+  color: rgb(253, 117, 27);
   background-color: inherit;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 .header__logo mark.active {
-  color: rgb(0, 180, 230);
+  color: white;
 }
 .header__user {
   display: -webkit-box;
@@ -553,21 +553,21 @@ body {
   font-size: 50px;
 }
 .welcome__title span {
-  color: rgb(253, 117, 27);
+  color: white;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 .welcome__title span.active {
-  color: white;
+  color: rgb(0, 180, 230);
 }
 .welcome__title mark {
-  color: inherit;
+  color: rgb(253, 117, 27);
   background-color: inherit;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 .welcome__title mark.active {
-  color: rgb(0, 180, 230);
+  color: white;
 }
 .welcome__text {
   margin: 0px 100px;

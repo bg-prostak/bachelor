@@ -35,16 +35,19 @@ document.querySelector('#musicians__body').oninput = function () {
     if (val != '') {
         elasticItems.forEach(function (elem) {
             if (elem.innerText.toLowerCase().search(val.toLowerCase()) == -1) {
-                elem.classList.add('hide');
+                elem.classList.add('anim-card');
+                elem.classList.add('hide-card');
             }
             else {
-                elem.classList.remove('hide');
+                elem.classList.remove('anim-card');
+                elem.classList.remove('hide-card');
             }
         });
     }
     else {
         elasticItems.forEach(function (elem) {
-            elem.classList.remove('hide');
+            elem.classList.remove('anim-card');
+            elem.classList.remove('hide-card');
         });
     }
 }

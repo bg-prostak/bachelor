@@ -249,7 +249,137 @@ body {
     }
 }
 
-.musicians__body.hide {
-    display: none;
-    transition: all 1s ease;
+/* ------------------------------------------------------------------------------------------FOOTER_SHOPPING */
+
+.footer-shopping {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+
+    &__body {
+        display: flex;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        cursor: pointer;
+    }
+
+    &__img {
+        img {
+            width: 40px;
+        }
+    }
+
+    &__counter {
+        color: $blue;
+        align-self: flex-start;
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+/* ------------------------------------------------------------------------------------------SHOPPING */
+
+.shopping {
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        width: 90%;
+        height: 90vh;
+        position: fixed;
+        top: 55%;
+        right: 5%;
+        transform: translate(-0%, -50%);
+        margin: auto;
+        background-color: $graybright1;
+        border: 1px solid $blue;
+        padding-left: 5px;
+    }
+
+    &__close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        img {
+            height: 32px;
+        }
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 5px;
+        height: 40px;
+        img {
+            width: 50px;
+        }
+    }
+
+    &__name {
+        color: $white;
+        text-transform: uppercase;
+        padding-right: 5px;
+    }
+
+    &__price {
+        color: $graywhite;
+    }
+
+    &__sum-name {
+        font-weight: 600;
+        font-size: 20px;
+        color: $blue;
+    }
+
+    &__sum-price {
+        font-weight: 500;
+        font-size: 20px;
+        color: $blue;
+    }
+
+    &__buy-button {
+        display: inline-block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        font-size: 28px;
+        padding: 5px 15px;
+        background-color: $graybright0;
+        color: $blue;
+        transition: all 0.5s ease;
+        &:hover {
+            background-color: $blue;
+            color: $white;
+        }
+    }
+}
+
+.anim-card {
+    transition: all 0.2s ease;
+    transform: scale(0);
+    opacity: 0;
+}
+
+.hide-card {
+    animation-name: hide-card;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hide-card {
+    0% {
+        visibility: visible;
+    }
+    100% {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        margin: 0;
+        font-size: 0;
+        padding: 0;
+    }
 }

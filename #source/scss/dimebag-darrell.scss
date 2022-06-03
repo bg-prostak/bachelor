@@ -22,6 +22,21 @@ body {
     flex-direction: column;
 }
 
+/* ------------------------------------------------------------------------------------------SCROLL-BAR */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $graywhite;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: $graybright0;
+}
+
 /* ------------------------------------------------------------------------------------------MUSICIAN */
 
 .musician {
@@ -57,6 +72,7 @@ body {
         font-size: 36px;
         text-align: center;
         color: $graywhite;
+        margin-bottom: 10px;
         span {
             color: $blue;
         }
@@ -78,74 +94,98 @@ body {
     margin-bottom: 40px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 25px;
-    font-size: 25px;
+}
+.button {
+    background-color: inherit;
     color: $graywhite;
-
-    &__category {
-        transition: all 0.3s ease;
-        &:hover {
-            color: $blue;
-        }
-    }
-
-    &__selected {
+    font-size: 22px;
+    transition: all 0.3s ease;
+    &:hover {
         color: $blue;
-        &.active {
-            color: $graywhite;
-        }
     }
 }
 
-/* ------------------------------------------------------------------------------------------EQUIPMENT */
+.button-active {
+    color: $blue;
+}
+.category-all {
+}
+.category-guitar {
+}
+.category-amp {
+}
+.category-pedal {
+}
+.category-accessory {
+}
+.category-studio {
+}
+.category-strings {
+}
+.category-microphon {
+}
+
+/* ------------------------------------------------------------------------------------------PRODUCTS */
 
 .equipment {
-    display: flex;
-    flex-direction: row;
-    margin: 0 auto;
-    margin-bottom: 80px;
-    background-color: $graybright3;
-    padding: 20px;
-    gap: 20px;
-    border: 3px solid $blue;
-    max-width: 90%;
     color: $graywhite;
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__product {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        background-color: $graybright2;
+        border: 3px solid $blue;
+        margin-bottom: 40px;
+    }
 
     &__photo {
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 10px 0px;
         img {
-            width: 320px;
+            max-width: 350px;
         }
     }
 
     &__info {
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        padding-right: 15px;
     }
 
     &__read {
         display: flex;
         flex-direction: column;
+
     }
 
     &__name {
-        font-size: 36px;
-        text-align: center;
+        margin: 20px 0px;
+        font-size: 32px;
         color: $blue;
-        margin-bottom: 15px;
+        text-align: center;
     }
 
     &__story {
         font-size: 20px;
-        text-align: justify;
-        line-height: 120%;
+        line-height: 115%;
         color: $graywhite;
-        margin-bottom: 5px;
+        text-align: justify;
     }
 
     &__more {
@@ -154,6 +194,7 @@ body {
         text-align: center;
         font-weight: 600;
         color: $blue;
+        margin: 5px 0px;
         transition: all 1s ease;
         &:hover {
             transform: scale(1.1);
@@ -161,123 +202,42 @@ body {
     }
 
     &__more-open {
-        margin-top: 5px;
+        font-size: 16px;
+        text-align: center;
+        line-height: 110%;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease-out;
+        a {
+            &:hover {
+            color: $blue;
+            }
+        }
     }
 
 }
+
 .buy {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
-    align-items: center;
+    padding-bottom: 15px;
 
     &__price {
-        font-size: 26px;
-        letter-spacing: 1px;
-        color: $graywhite;
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+        letter-spacing: 0.5px;
         span {
+            padding-left: 5px;
             color: $blue;
         }
     }
 
     &__button {
-        font-size: 26px;
-        text-align: center;
-        color: $blue;
-        padding: 10px 15px;
-        background-color: $graybright1;
-        transition: all 0.5s ease;
-        &:hover {
-            color: $graywhite;
-            background-color: $blue;
-        }
-    }
-}
-
-/* ------------------------------------------------------------------------------------------PRODUCTS */
-
-.equipment {
-    border: 3px solid $blue;
-    margin: 0 auto;
-    margin-bottom: 50px;
-    max-width: 90%;
-    transition: all 0.5s ease;
-    &.active {
-        border: 3px solid $orange;
-    }
-
-    &__body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        flex-wrap: wrap;
-        background-color: $graybright2;
-        padding: 30px;
-        transition: all 0.5s ease;
-    }
-}
-
-.product {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: $graybright1;
-    padding: 20px;
-    margin: 15px;
-    gap: 20px;
-    max-width: 360px;
-
-    &__container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $graybright1;
-        width: 320px;
-        height: 320px;
-    }
-
-    &__img {
-        width: 320px;
-    }
-
-    &__name {
-        display: flex;
-        align-items: center;
-        font-size: 25px;
-        text-align: center;
-        color: $orange;
-        font-weight: 500;
-        min-height: 80px;
-        &.active {
-            color: $orange;
-        }
-    }
-
-    &__pbflex {
-        width: 320px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    &__price {
-        font-size: 18px;
-        text-align: center;
-        color: $graywhite;
-        padding-left: 5px;
-    }
-
-    &__button {
         font-size: 20px;
         text-align: center;
-        color: $orange;
+        color: $blue;
         padding: 10px 15px;
         background-color: $graybright0;
         transition: all 0.5s ease;
@@ -286,12 +246,146 @@ body {
             color: $graywhite;
         }
     }
-
+    
     &__button_active {
-        font-size: 20px;
-        text-align: center;
         color: $graywhite;
-        padding: 10px 15px;
         background-color: $blue;
+    }
+}
+
+/* ------------------------------------------------------------------------------------------FOOTER_SHOPPING */
+
+.footer-shopping {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+
+    &__body {
+        display: flex;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        cursor: pointer;
+    }
+
+    &__img {
+        img {
+            width: 40px;
+        }
+    }
+
+    &__counter {
+        color: $blue;
+        align-self: flex-start;
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+/* ------------------------------------------------------------------------------------------SHOPPING */
+
+.shopping {
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        width: 90%;
+        height: 90vh;
+        position: fixed;
+        top: 55%;
+        right: 5%;
+        transform: translate(-0%, -50%);
+        margin: auto;
+        background-color: $graybright1;
+        border: 1px solid $blue;
+        padding-left: 5px;
+    }
+
+    &__close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        img {
+            height: 32px;
+        }
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 5px;
+        height: 40px;
+        img {
+            width: 50px;
+        }
+    }
+
+    &__name {
+        color: $white;
+        text-transform: uppercase;
+        padding-right: 5px;
+    }
+
+    &__price {
+        color: $graywhite;
+    }
+
+    &__sum-name {
+        font-weight: 600;
+        font-size: 20px;
+        color: $blue;
+    }
+
+    &__sum-price {
+        font-weight: 500;
+        font-size: 20px;
+        color: $blue;
+    }
+
+    &__buy-button {
+        display: inline-block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        font-size: 28px;
+        padding: 5px 15px;
+        background-color: $graybright0;
+        color: $blue;
+        transition: all 0.5s ease;
+        &:hover {
+            background-color: $blue;
+            color: $white;
+        }
+    }
+}
+
+
+.anim-card {
+    transition: all 0.2s ease;
+    transform: scale(0);
+    opacity: 0;
+}
+
+.hide-card {
+    animation-name: hide-card;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    border: none;
+}
+
+@keyframes hide-card {
+    0% {
+        visibility: visible;
+    }
+    100% {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        margin: 0;
+        font-size: 0;
+        padding: 0;
     }
 }

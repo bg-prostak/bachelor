@@ -752,8 +752,158 @@ body {
 .musicians__bands.active {
   color: rgb(253, 117, 27);
 }
-.musicians__body.hide {
-  display: none;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+/* ------------------------------------------------------------------------------------------FOOTER_SHOPPING */
+.footer-shopping {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.footer-shopping__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+.footer-shopping__img img {
+  width: 40px;
+}
+.footer-shopping__counter {
+  color: rgb(0, 180, 230);
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* ------------------------------------------------------------------------------------------SHOPPING */
+.shopping__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  height: 90vh;
+  position: fixed;
+  top: 55%;
+  right: 5%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  margin: auto;
+  background-color: rgb(22, 20, 22);
+  border: 1px solid rgb(0, 180, 230);
+  padding-left: 5px;
+}
+.shopping__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.shopping__close img {
+  height: 32px;
+}
+.shopping__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 5px;
+  height: 40px;
+}
+.shopping__img img {
+  width: 50px;
+}
+.shopping__name {
+  color: white;
+  text-transform: uppercase;
+  padding-right: 5px;
+}
+.shopping__price {
+  color: rgb(225, 227, 230);
+}
+.shopping__sum-name {
+  font-weight: 600;
+  font-size: 20px;
+  color: rgb(0, 180, 230);
+}
+.shopping__sum-price {
+  font-weight: 500;
+  font-size: 20px;
+  color: rgb(0, 180, 230);
+}
+.shopping__buy-button {
+  display: inline-block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  font-size: 28px;
+  padding: 5px 15px;
+  background-color: rgb(10, 10, 10);
+  color: rgb(0, 180, 230);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.shopping__buy-button:hover {
+  background-color: rgb(0, 180, 230);
+  color: white;
+}
+
+.anim-card {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+}
+
+.hide-card {
+  -webkit-animation-name: hide-card;
+          animation-name: hide-card;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes hide-card {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+    font-size: 0;
+    padding: 0;
+  }
+}
+
+@keyframes hide-card {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+    font-size: 0;
+    padding: 0;
+  }
 }

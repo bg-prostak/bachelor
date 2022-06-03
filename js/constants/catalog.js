@@ -6,6 +6,8 @@ const CATALOG = [
         name: '1981 Dean ML - "The Dean from Hell"',
         img: 'img/dimebag-darrell/1981-dean-from-hell-xl.png',
         price: 50000,
+        story: 'В интервью 1994 года Даймбэг Даррелл называет свою гитару 1981 года синюю Dean from Hell своей рабочей лошадкой. "Я придерживался того, что всегда использовал, - усилителей Randall, а моим основным инструментом по-прежнему остается моя синяя гитара 81-го года с наклейками Kiss. Эту гитару просто невозможно остановить. Я использую ее во всех песнях, которые находятся в стандартном строю", - сказал он.',
+        more: '<a href="https://www.guitarworld.com/gw-archive/dimebag-darrell-discusses-his-roots-gear-and-pantera-1994-guitar-world-interview">Ссылка на полное интервью</a>',
     },
     {
         id: 'el2',
@@ -14,6 +16,8 @@ const CATALOG = [
         name: 'Dean Dimebag Concrete Sledge ML - Reversed Headstock',
         img: 'img/dimebag-darrell/dean-dimebag-concrete-sledge-ml-reversed-headstock-xl.png',
         price: 60000,
+        story: 'Даймбэг Даррелл использовал эту гитару в 1990 году на концерте в Москве во время "Primal Concrete Sledge"',
+        more: '<iframe width="560" height="315" src="https://www.youtube.com/embed/3DOamgay6Mw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
     },
     {
         id: 'el3',
@@ -22,6 +26,8 @@ const CATALOG = [
         name: 'Dunlop Tortex Standard 0.88mm Guitar Picks (50шт.)',
         img: 'img/dimebag-darrell/dunlop-tortex-standard-0-88mm-guitar-picks-xl.png',
         price: 2000,
+        story: 'Даймбэг Даррелл использовал эти медиаторы на протяжении всей игры в Pantera',
+        more: 'Пост в инстаграме Рекса Брауна <br> <img src="img/dimebag-darrell/dime_pick.jpg" alt="">',
     },
     {
         id: 'el4',
@@ -30,6 +36,8 @@ const CATALOG = [
         name: 'MXR 6-Band Graphic Equalizer',
         img: 'img/dimebag-darrell/mxr-6-band-graphic-equalizer-xl.png',
         price: 8000,
+        story: 'В интервью Guitar World после выхода "Vulgar Display of Power", когда Даймбэга Даррелла спросили о его педалях эффектов, он ответил: "На самом деле это довольно просто. Я подключаю свою гитару к шестиполосному эквалайзеру Furman PQ-4, MXR Blue, к моему шумоподавителю Rocktron Hush 2-B и к усилителям. И на этом все."',
+        more: '<a href="https://www.guitarworld.com/gw-archive/dimebag-darrell-discusses-his-roots-gear-and-pantera-1994-guitar-world-interview">Ссылка на полное интервью</a>',
     },
     {
         id: 'el5',
@@ -38,6 +46,8 @@ const CATALOG = [
         name: 'Randall Warhead 2CH 300 Watt Amp Head',
         img: 'img/dimebag-darrell/randall-warhead-2ch-300-watt-amp-head-xl.png',
         price: 12000,
+        story: 'На скриншоте клипа Pantera - Revolution Is My Name можно увидеть Randall Warhead 2CH 300 Watt Amp Head',
+        more: '<img src="img/dimebag-darrell/dime_head.jpg" alt="">',
     },
     {
         id: 'el6',
@@ -46,6 +56,8 @@ const CATALOG = [
         name: '1981 Dean ML - "The Dean from Hell"',
         img: 'img/dimebag-darrell/dean-dimebag-concrete-sledge-ml-reversed-headstock-xl.png',
         price: 40000,
+        story: 0,
+        more: 0,
     },
     {
         id: 'el7',
@@ -54,6 +66,8 @@ const CATALOG = [
         name: '1981 Dean ML - "The Dean from Hell"',
         img: 'img/dimebag-darrell/dean-dimebag-concrete-sledge-ml-reversed-headstock-xl.png',
         price: 40000,
+        story: 0,
+        more: 0,
     },
     {
         id: 'el8',
@@ -62,6 +76,8 @@ const CATALOG = [
         name: '1981 Dean ML - "The Dean from Hell"',
         img: 'img/dimebag-darrell/dean-dimebag-concrete-sledge-ml-reversed-headstock-xl.png',
         price: 40000,
+        story: 0,
+        more: 0,
     },
     {
         id: 'el9',
@@ -70,6 +86,8 @@ const CATALOG = [
         name: '1981 Dean ML - "The Dean from Hell"',
         img: 'img/dimebag-darrell/dean-dimebag-concrete-sledge-ml-reversed-headstock-xl.png',
         price: 40000,
+        story: 0,
+        more: 0,
     },
     {
         id: 'el10',
@@ -78,5 +96,7 @@ const CATALOG = [
         name: '1981 Dean ML - "The Dean from Hell"',
         img: 'img/dimebag-darrell/dean-dimebag-concrete-sledge-ml-reversed-headstock-xl.png',
         price: 40000,
+        story: 0,
+        more: 0,
     },
 ];

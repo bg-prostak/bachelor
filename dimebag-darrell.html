@@ -44,51 +44,20 @@
                 </div>
             </div>
             <div class="page__categories categories">
-                <a href=""><div class="categories__category categories__selected" id="categories__selected">Все</div></a>
-                <a href=""><div class="categories__category" onmouseover="hoverOnSelected()"
-                    onmouseout="hoverOffSelected()">Гитары</div></a>
-                <a href=""><div class="categories__category" onmouseover="hoverOnSelected()"
-                    onmouseout="hoverOffSelected()">Усилители</div></a>
-                <a href=""><div class="categories__category" onmouseover="hoverOnSelected()"
-                    onmouseout="hoverOffSelected()">Педали эффектов</div></a>
-                <a href=""><div class="categories__category" onmouseover="hoverOnSelected()"
-                    onmouseout="hoverOffSelected()">Музыкальные аксессуары</div></a>
-                <a href=""><div class="categories__category" onmouseover="hoverOnSelected()"
-                    onmouseout="hoverOffSelected()">Студийное</div></a>
-                <a href=""><div class="categories__category" onmouseover="hoverOnSelected()"
-                    onmouseout="hoverOffSelected()">Струны</div></a>
-                <a href=""><div class="categories__category" onmouseover="hoverOnSelected()"
-                    onmouseout="hoverOffSelected()">Микрофоны</div></a>
+                <button class="categories__category button category-all button-active" data-filter="all">Все</button>
+                <button class="categories__category button category-guitar" data-filter="guitar">Гитары</button>
+                <button class="categories__category button category-amp" data-filter="amp">Усилители</button>
+                <button class="categories__category button category-pedal" data-filter="pedal">Педали эффектов</button>
+                <button class="categories__category button category-accessory" data-filter="accessory">Музыкальные аксессуары</button>
+                <button class="categories__category button category-studio" data-filter="studio">Студийное</button>
+                <button class="categories__category button category-strings" data-filter="strings">Струны</button>
+                <button class="categories__category button category-microphon" data-filter="microphon">Микрофоны</button>
             </div>
-            <div class="page__equipment equipment" id="products-man">
-            </div>
-            <div class="equipment__photo">
-                <img src="img/dimebag-darrell/1981-dean-from-hell-xl.png" alt="">
-            </div>
-            <div class="equipment__info">
-                <div class="equipment__read">
-                    <div class="equipment__name">1981 Dean ML - "The Dean from Hell"</div>
-                    <div class="equipment__story">В интервью 1994 года Даймбэг Даррелл называет свою гитару
-                        1981 года синюю Dean from Hell своей рабочей лошадкой. "Я придерживался того,
-                        что всегда использовал, - усилителей Randall, а моим основным инструментом
-                        по-прежнему остается моя синяя гитара 81-го года с наклейками Kiss. Эту
-                        гитару просто невозможно остановить. Я использую ее во всех песнях, которые
-                        находятся в стандартном строю", - сказал он.</div>
-                    <button class="equipment__more">Подробнее</button>
-                    <div class="equipment__more-open">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus architecto,
-                        est vel quas ratione inventore sequi tempore, harum sint amet omnis? Deleniti
-                        non labore nam dignissimos quia error obcaecati. Sequi!
-                    </div>
-                </div>
-                <div class="equipment__buy buy">
-                    <div class="buy__price">Стоимость: <span>40000 руб.</span></div>
-                    <a href=""><div class="buy__button">Добавить в корзину</div></a>
-                </div>
-            </div>
+            <div class="page__equipment equipment" id="products-man"></div>
+            <div class="footer-shopping" id="footer-shopping-dimebag-darrell"></div>
+            <div class="shopping" id="shopping-dimebag-darrell"></div>
         </div>
     </div>
-    <script type="text/javascript" src="js/scripts/script-more.js"></script>
     <script src="js/constants/catalog.js"></script>
     <script src="js/constants/root.js"></script>
     <script src="js/utils/local-storage-util.js"></script>
@@ -97,6 +66,10 @@
     <script src="js/components/entry-man.js"></script>
     <script src="js/components/header-register-man.js"></script>
     <script src="js/components/register-man.js"></script>
+    <script src="js/dimebag-darrell/categories-man.js"></script>
+    <script type="text/javascript" src="js/scripts/script-more.js"></script>
+    <script src="js/dimebag-darrell/shopping-dimebag-darrell.js"></script>
+    <script src="js/dimebag-darrell/footer-shopping-dimebag-darrell.js"></script>
 </body>
 
 </html>
