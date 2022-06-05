@@ -2,6 +2,7 @@
 
 @import "null.scss";
 @import "header-man.scss";
+@import "footer-man.scss";
 @import "variables.scss";
 
 /* ------------------------------------------------------------------------------------------TECHNIC */
@@ -13,6 +14,7 @@ h1, h2, h3, h4, h5, h6 {
 body {
     color: $white;
     background-color: $graybright1;
+    font-family: "Charis SIL";
 }
 
 .wrapper {
@@ -50,6 +52,9 @@ body {
     border: 5px solid $blue;
 
     &__photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         img {
             width: 450px;
         }
@@ -66,6 +71,7 @@ body {
         text-align: center;
         color: $blue;
         font-weight: 500;
+        line-height: 110%;
     }
 
     &__bands {
@@ -73,6 +79,7 @@ body {
         text-align: center;
         color: $graywhite;
         margin-bottom: 10px;
+        line-height: 110%;
         span {
             color: $blue;
         }
@@ -83,6 +90,35 @@ body {
         text-align: justify;
         color: $graywhite;
         line-height: 120%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .musician {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px) {
+    .musician {
+
+        &__photo {
+            img {
+                width: 90vw;
+            }
+        }
+
+        &__name {
+            font-size: 35px;
+        }
+
+        &__bands {
+            font-size: 25px;
+        }
+
+        &__wiki {
+            font-size: 18px;
+        }
     }
 }
 
@@ -204,7 +240,7 @@ body {
     &__more-open {
         font-size: 16px;
         text-align: center;
-        line-height: 110%;
+        line-height: 120%;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease-out;
@@ -241,6 +277,7 @@ body {
         padding: 10px 15px;
         background-color: $graybright0;
         transition: all 0.5s ease;
+        font-family: serif;
         &:hover {
             background-color: $blue;
             color: $graywhite;
@@ -250,6 +287,62 @@ body {
     &__button_active {
         color: $graywhite;
         background-color: $blue;
+        font-family: serif;
+    }
+}
+
+@media (max-width: 1000px) {
+    .equipment {
+    
+        &__product {
+            flex-direction: column;
+        }
+
+        &__info {
+            padding: 0 15px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .equipment {
+        &__name {
+            margin: 10px 0px;
+            font-size: 25px;
+        }
+
+        &__story {
+            font-size: 16px;
+        }
+
+        &__photo {
+            img {
+                max-width: 90vw;
+            }
+        }
+
+        &__more-open {
+            img {
+                width: 90vw;
+            }
+        }
+    }
+
+    .buy {
+        flex-direction: column;
+        gap: 5px;
+    
+        &__price {
+            font-size: 18px;
+            justify-content: center;
+        }
+    
+        &__button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
     }
 }
 
@@ -361,7 +454,6 @@ body {
         }
     }
 }
-
 
 .anim-card {
     transition: all 0.2s ease;

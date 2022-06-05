@@ -2,6 +2,7 @@
 
 @import "null.scss";
 @import "header-man.scss";
+@import "footer-man.scss";
 @import "variables.scss";
 
 /* ------------------------------------------------------------------------------------------TECHNIC */
@@ -13,6 +14,7 @@ h1, h2, h3, h4, h5, h6 {
 body {
     color: $white;
     background-color: $graybright1;
+    font-family: "Charis SIL";
 }
 
 .wrapper {
@@ -41,6 +43,8 @@ body {
 
 .welcome {
     display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
     background-image: url(../img/first-view/3b.jpg);
     background-repeat: no-repeat;
@@ -55,11 +59,10 @@ body {
         flex: 1 1 auto;
         gap: 20px;
         width: 100%;
-        max-width: 1100px;
+        max-width: 77vw;
         background-color: $graybright1bg;
         border: 7px solid $blue;
         margin: 0 auto;
-        margin-top: 29vh;
         transition: all 0.5s ease;
         &.active {
             border: 7px solid $orange;
@@ -102,7 +105,7 @@ body {
 
     &__button {
         text-align: center;
-        margin: 0 auto;
+        margin: 0px 15px;
         margin-bottom: 30px;
         padding: 10px;
         border: 5px solid $blue;
@@ -116,6 +119,22 @@ body {
         }
     }
 
+}
+
+@media (max-width: 850px) {
+    .welcome {
+        &__title {
+            font-size: 35px;
+        }
+
+        &__text {
+            display: none;
+        }
+
+        &__button {
+            font-size: 25px;
+        }
+    }
 }
 
 /* ------------------------------------------------------------------------------------------SEARCH-BOX */
@@ -133,7 +152,7 @@ body {
 .catalog {
 
     &__search-box {
-        margin: 50px 0px;
+        margin: 50px 5px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -176,6 +195,7 @@ body {
     flex-wrap: wrap;
     background-color: $graybright2;
     border: 3px solid $blue;
+    border-radius: 10px;
     margin: 0 auto;
     margin-bottom: 50px;
     max-width: 90%;
@@ -223,6 +243,7 @@ body {
         color: $blue;
         font-weight: 500;
         transition: all 1s ease;
+        line-height: 110%;
         &.active {
             color: $orange;
         }
@@ -246,6 +267,18 @@ body {
     }
 
     &__band {
+    }
+}
+
+@media (max-width: 939px) {
+    .musicians {
+        padding: 2vh 30px;
+
+        &__photo {
+            img {
+                width: 62vw;
+            }
+        }
     }
 }
 
@@ -354,6 +387,15 @@ body {
         &:hover {
             background-color: $blue;
             color: $white;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .shopping {
+
+        &__body {
+            padding-top: 40px;
         }
     }
 }
